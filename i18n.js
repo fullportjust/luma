@@ -1,0 +1,129 @@
+/* ===================================================================
+   LANGUAGE / TRANSLATIONS for Lumi Nuru
+   Add or edit languages here. Each key maps to the text shown.
+   To translate a phrase, find its key and edit the text per language.
+   =================================================================== */
+
+const LANGS = { en:"EN", th:"ไทย", zh:"中文", ja:"日本語", ko:"한국어" };
+
+const I18N = {
+  // ---- nav ----
+  "nav.home":   { en:"Home",  th:"หน้าแรก", zh:"首页", ja:"ホーム", ko:"홈" },
+  "nav.menu":   { en:"Menu",  th:"เมนู",    zh:"菜单", ja:"メニュー", ko:"메뉴" },
+  "nav.team":   { en:"Team",  th:"ทีมงาน",  zh:"团队", ja:"スタッフ", ko:"팀" },
+  "nav.book":   { en:"Book",  th:"จอง",      zh:"预订", ja:"予約", ko:"예약" },
+
+  // ---- shared / footer ----
+  "foot.tag":   { en:"Private KTV & massage lounge — karaoke rooms, drink buffets and a full spa menu.",
+                  th:"คาราโอเกะส่วนตัว & เลานจ์นวด — ห้องคาราโอเกะ บุฟเฟ่ต์เครื่องดื่ม และเมนูสปาครบครัน",
+                  zh:"私人KTV与按摩会所 — 卡拉OK包间、酒水自助和全套水疗菜单。",
+                  ja:"プライベートKTV＆マッサージラウンジ — カラオケルーム、ドリンクビュッフェ、フルスパメニュー。", ko:"프라이빗 KTV & 마사지 라운지 — 노래방, 음료 뷔페, 풀 스파 메뉴." },
+  "foot.open":  { en:"Open daily · 6pm–late", th:"เปิดทุกวัน · 18:00 – ดึก", zh:"每日营业 · 晚6点至深夜", ja:"年中無休 · 18時〜深夜", ko:"매일 영업 · 오후 6시 ~ 심야" },
+  "foot.visit": { en:"Visit", th:"ที่ตั้ง", zh:"地址", ja:"アクセス", ko:"오시는 길" },
+  "foot.pages": { en:"Pages", th:"หน้าเพจ", zh:"页面", ja:"ページ", ko:"페이지" },
+  "foot.legal": { en:"Strictly 20+. Please drink responsibly. Prices in Thai Baht (฿) and subject to change.",
+                  th:"เฉพาะอายุ 20 ปีขึ้นไป ดื่มอย่างมีความรับผิดชอบ ราคาเป็นเงินบาท (฿) อาจเปลี่ยนแปลงได้",
+                  zh:"仅限20岁以上。请理性饮酒。价格以泰铢(฿)计，可能变动。",
+                  ja:"20歳以上限定。飲酒は適量を。価格はタイバーツ(฿)、変更の場合あり。", ko:"만 20세 이상만 이용 가능. 책임 있는 음주를 부탁드립니다. 가격은 태국 바트(฿) 기준이며 변경될 수 있습니다." },
+
+  // ---- home ----
+  "home.eyebrow": { en:"Karaoke · Massage · Nightlife", th:"คาราโอเกะ · นวด · ไนต์ไลฟ์", zh:"卡拉OK · 按摩 · 夜生活", ja:"カラオケ · マッサージ · ナイトライフ", ko:"노래방 · 마사지 · 나이트라이프" },
+  "home.hero":    { en:"Private KTV rooms, free-flow drinks, and a full spa menu — an intimate, neon-lit lounge in the heart of Bangkok.",
+                    th:"ห้องคาราโอเกะส่วนตัว เครื่องดื่มไม่อั้น และเมนูสปาครบครัน — เลานจ์สุดอบอุ่นใจกลางกรุงเทพฯ",
+                    zh:"私人KTV包间、无限畅饮和全套水疗菜单 — 位于曼谷市中心的霓虹温馨会所。",
+                    ja:"プライベートKTVルーム、フリードリンク、フルスパメニュー — バンコク中心部のネオン輝く隠れ家ラウンジ。", ko:"프라이빗 KTV 룸, 무제한 음료, 풀 스파 메뉴 — 방콕 중심부의 아늑한 네온 라운지." },
+  "home.book":    { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
+  "home.viewmenu":{ en:"View Menu", th:"ดูเมนู", zh:"查看菜单", ja:"メニューを見る", ko:"메뉴 보기" },
+  "home.offer":   { en:"What we offer", th:"บริการของเรา", zh:"我们提供", ja:"サービス", ko:"서비스 안내" },
+  "home.worlds":  { en:"Two worlds, one address", th:"สองโลก ในที่เดียว", zh:"两个世界，一个地址", ja:"二つの世界が一つに", ko:"두 개의 세계, 하나의 공간" },
+  "home.ktv":     { en:"Private KTV", th:"คาราโอเกะส่วนตัว", zh:"私人KTV", ja:"プライベートKTV", ko:"프라이빗 KTV" },
+  "home.ktv.d":   { en:"Soundproof karaoke suites for 4–12 guests.", th:"ห้องคาราโอเกะเก็บเสียง สำหรับ 4–12 ท่าน", zh:"隔音卡拉OK套房，可容纳4–12人。", ja:"4〜12名様用の防音カラオケスイート。", ko:"4~12인용 방음 노래방 룸." },
+  "home.drinks":  { en:"Drink Buffet", th:"บุฟเฟ่ต์เครื่องดื่ม", zh:"酒水自助", ja:"ドリンクビュッフェ", ko:"음료 뷔페" },
+  "home.drinks.d":{ en:"Free-flow drinks, mixers included — plus beer & soju sets.", th:"เครื่องดื่มไม่อั้น รวมมิกเซอร์ — พร้อมเซ็ตเบียร์และโซจู", zh:"无限畅饮，含调酒 — 另有啤酒和烧酒套餐。", ja:"ミキサー付き飲み放題 — ビール・ソジュセットも。", ko:"믹서 포함 무제한 음료 — 맥주 & 소주 세트도 준비." },
+  "home.spa":     { en:"Massage & Spa", th:"นวด & สปา", zh:"按摩与水疗", ja:"マッサージ＆スパ", ko:"마사지 & 스파" },
+  "home.spa.d":   { en:"Thai, oil, soapy & Nuru courses in private rooms.", th:"นวดไทย น้ำมัน สบู่ & นูรุ ในห้องส่วนตัว", zh:"私人房间内的泰式、精油、泡泡及Nuru课程。", ja:"個室でのタイ式・オイル・ソープ・ヌルコース。", ko:"프라이빗 룸에서 즐기는 타이·오일·소피·누루 코스." },
+  "home.from":    { en:"from", th:"เริ่มต้น", zh:"起", ja:"〜", ko:"부터" },
+  "home.combo":   { en:"KTV + Nuru Combo", th:"เซ็ตคาราโอเกะ + นูรุ", zh:"KTV + Nuru 套餐", ja:"KTV + ヌル セット", ko:"KTV + 누루 세트" },
+  "home.combo.d": { en:"1 hr karaoke + 1 hr Nuru massage —", th:"คาราโอเกะ 1 ชม. + นวดนูรุ 1 ชม. —", zh:"1小时卡拉OK + 1小时Nuru按摩 —", ja:"カラオケ1時間 + ヌルマッサージ1時間 —", ko:"노래방 1시간 + 누루 마사지 1시간 —" },
+  "home.bestvalue":{ en:"Best Value", th:"คุ้มที่สุด", zh:"超值", ja:"お得", ko:"최고의 가치" },
+  "home.reservecombo":{ en:"Reserve the combo", th:"จองเซ็ตนี้", zh:"预订套餐", ja:"セットを予約", ko:"세트 예약" },
+
+  // ---- menu ----
+  "menu.eyebrow": { en:"All prices in ฿ · service charge & VAT included", th:"ราคาทั้งหมดเป็นบาท · รวมเซอร์วิสชาร์จและภาษีแล้ว", zh:"所有价格以฿计 · 已含服务费和增值税", ja:"全価格฿表示 · サービス料・税込", ko:"모든 가격 ฿ 기준 · 봉사료 및 VAT 포함" },
+  "menu.title":   { en:"Menu & Pricing", th:"เมนู & ราคา", zh:"菜单与价格", ja:"メニュー＆料金", ko:"메뉴 & 가격" },
+  "menu.rooms":   { en:"KTV Rooms", th:"ห้องคาราโอเกะ", zh:"KTV包间", ja:"KTVルーム", ko:"KTV 룸" },
+  "menu.drinkbuffet":{ en:"Drink Buffet", th:"บุฟเฟ่ต์เครื่องดื่ม", zh:"酒水自助", ja:"ドリンクビュッフェ", ko:"음료 뷔페" },
+  "menu.drinknote":{ en:"Free refill on all buffet drinks — mixers included.", th:"เติมเครื่องดื่มบุฟเฟ่ต์ได้ไม่อั้น — รวมมิกเซอร์", zh:"自助酒水免费续杯 — 含调酒。", ja:"ビュッフェドリンクおかわり自由 — ミキサー込み。", ko:"모든 뷔페 음료 무한 리필 — 믹서 포함." },
+  "menu.bottles": { en:"Bottles, Beer & Soju", th:"ขวด เบียร์ & โซจู", zh:"瓶装酒、啤酒和烧酒", ja:"ボトル・ビール・ソジュ", ko:"양주, 맥주 & 소주" },
+  "menu.shots":   { en:"Shots", th:"ช็อต", zh:"烈酒杯", ja:"ショット", ko:"샷" },
+  "menu.massage": { en:"Massage & Spa", th:"นวด & สปา", zh:"按摩与水疗", ja:"マッサージ＆スパ", ko:"마사지 & 스파" },
+  "menu.special": { en:"Special Course", th:"คอร์สพิเศษ", zh:"特别课程", ja:"スペシャルコース", ko:"스페셜 코스" },
+  "menu.special.sub":{ en:"· VIP room", th:"· ห้อง VIP", zh:"· VIP房", ja:"· VIPルーム", ko:"· VIP 룸" },
+  "menu.longtime":{ en:"Long Time / Take Out", th:"ลองไทม์ / เทคเอาท์", zh:"长时间 / 外出", ja:"ロングタイム / テイクアウト", ko:"롱타임 / 테이크아웃" },
+  "menu.promos":  { en:"Promotions", th:"โปรโมชั่น", zh:"优惠", ja:"プロモーション", ko:"프로모션" },
+  "menu.bookbtn": { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
+
+  // ---- team ----
+  "team.eyebrow": { en:"Lumi Nuru", th:"Lumi Nuru", zh:"Lumi Nuru", ja:"Lumi Nuru", ko:"Lumi Nuru" },
+  "team.title":   { en:"Our Team", th:"ทีมงานของเรา", zh:"我们的团队", ja:"スタッフ紹介", ko:"우리 팀" },
+  "team.sub":     { en:"Meet the team behind Lumi Nuru.", th:"พบกับทีมงานของ Lumi Nuru", zh:"认识 Lumi Nuru 的团队。", ja:"Lumi Nuru のスタッフをご紹介します。", ko:"Lumi Nuru의 팀을 소개합니다." },
+
+  // ---- book ----
+  "book.eyebrow": { en:"Reservations", th:"การจอง", zh:"预订", ja:"ご予約", ko:"예약" },
+  "book.title":   { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
+  "book.intro":   { en:"Choose what you'd like and when. You'll get a reference number instantly — we confirm by phone or LINE. No payment online.",
+                    th:"เลือกบริการและเวลาที่ต้องการ คุณจะได้รับหมายเลขอ้างอิงทันที — เรายืนยันทางโทรศัพท์หรือ LINE ไม่มีการชำระเงินออนไลน์",
+                    zh:"选择您想要的服务和时间。您会立即获得预订编号 — 我们将通过电话或LINE确认。无需在线付款。",
+                    ja:"ご希望の内容と日時をお選びください。予約番号がすぐに発行されます — 電話またはLINEで確認します。オンライン決済はありません。", ko:"원하시는 서비스와 시간을 선택하세요. 예약 번호가 즉시 발급됩니다 — 전화 또는 LINE으로 확인해 드립니다. 온라인 결제는 없습니다." },
+  "book.q1":      { en:"1 · What are you here for?", th:"1 · คุณสนใจบริการใด?", zh:"1 · 您想要什么？", ja:"1 · ご希望のサービスは？", ko:"1 · 어떤 서비스를 원하시나요?" },
+  "book.q2":      { en:"2 · When?", th:"2 · เมื่อไหร่?", zh:"2 · 何时？", ja:"2 · 日時は？", ko:"2 · 언제 방문하시나요?" },
+  "book.q3":      { en:"3 · How many guests?", th:"3 · กี่ท่าน?", zh:"3 · 几位客人？", ja:"3 · 何名様？", ko:"3 · 몇 분이신가요?" },
+  "book.q4":      { en:"4 · Your details", th:"4 · ข้อมูลของคุณ", zh:"4 · 您的信息", ja:"4 · お客様情報", ko:"4 · 고객 정보" },
+  "book.svc.ktv": { en:"🎤 Private KTV", th:"🎤 คาราโอเกะส่วนตัว", zh:"🎤 私人KTV", ja:"🎤 プライベートKTV", ko:"🎤 프라이빗 KTV" },
+  "book.svc.massage":{ en:"💆 Massage & Spa", th:"💆 นวด & สปา", zh:"💆 按摩与水疗", ja:"💆 マッサージ＆スパ", ko:"💆 마사지 & 스파" },
+  "book.svc.combo":{ en:"✨ KTV + Massage", th:"✨ คาราโอเกะ + นวด", zh:"✨ KTV + 按摩", ja:"✨ KTV + マッサージ", ko:"✨ KTV + 마사지" },
+  "book.summary": { en:"Your reservation", th:"การจองของคุณ", zh:"您的预订", ja:"ご予約内容", ko:"예약 내용" },
+  "book.submit":  { en:"Request reservation", th:"ส่งคำขอจอง", zh:"提交预订", ja:"予約をリクエスト", ko:"예약 요청" },
+  "book.note":    { en:"Strictly 20+. We confirm availability before anything is final.", th:"เฉพาะอายุ 20 ปีขึ้นไป เรายืนยันคิวว่างก่อนการจองจะสมบูรณ์", zh:"仅限20岁以上。我们会先确认可用性。", ja:"20歳以上限定。確定前に空き状況を確認します。", ko:"만 20세 이상만 이용 가능. 확정 전 예약 가능 여부를 확인합니다." },
+  "book.received":{ en:"✓ Request received", th:"✓ ได้รับคำขอแล้ว", zh:"✓ 已收到请求", ja:"✓ リクエストを受け付けました", ko:"✓ 요청이 접수되었습니다" },
+  "book.ref":     { en:"Reference", th:"หมายเลขอ้างอิง", zh:"预订编号", ja:"予約番号", ko:"예약 번호" },
+  "book.confirm.intro":{ en:"To lock it in, send your reference to us — details are pre-filled.", th:"เพื่อยืนยัน ส่งหมายเลขอ้างอิงมาหาเรา — กรอกรายละเอียดไว้ให้แล้ว", zh:"如需确认，请将编号发送给我们 — 信息已预填。", ja:"確定するには予約番号をお送りください — 内容は入力済みです。", ko:"확정하시려면 예약 번호를 보내주세요 — 내용은 미리 입력되어 있습니다." },
+  "book.confirm.line":{ en:"Confirm via LINE", th:"ยืนยันผ่าน LINE", zh:"通过LINE确认", ja:"LINEで確認", ko:"LINE으로 확인" },
+  "book.confirm.call":{ en:"Call to confirm", th:"โทรเพื่อยืนยัน", zh:"致电确认", ja:"電話で確認", ko:"전화로 확인" },
+};
+
+// current language (remembered in the browser)
+function getLang(){ return localStorage.getItem('ln_lang') || 'en'; }
+function setLang(l){ localStorage.setItem('ln_lang', l); applyI18n(); }
+
+function t(key){
+  const e = I18N[key];
+  if(!e) return key;
+  return e[getLang()] || e.en || key;
+}
+
+// translate every element that has a data-i18n="key" attribute
+function applyI18n(){
+  const lang = getLang();
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    el.textContent = t(el.getAttribute('data-i18n'));
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    el.innerHTML = t(el.getAttribute('data-i18n-html'));
+  });
+  // re-render any dynamic content that listens for language changes
+  if(typeof onLangChange === 'function') onLangChange();
+  // reflect the active language in the switcher
+  document.querySelectorAll('.lang-opt').forEach(o=>{
+    o.classList.toggle('active', o.dataset.lang===lang);
+  });
+}
+
+// build the language switcher markup
+function langSwitcherHTML(){
+  return `<div class="lang-switch">` +
+    Object.entries(LANGS).map(([code,label])=>
+      `<button class="lang-opt" data-lang="${code}" onclick="setLang('${code}')">${label}</button>`
+    ).join('') + `</div>`;
+}

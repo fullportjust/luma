@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu &amp; Pricing — Lumi Nuru</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="nav-mount"></div>
+
+<section style="padding:3rem 0 1rem">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="menu.eyebrow">All prices in ฿ · service charge &amp; VAT included</p>
+    <h1 class="gold" style="font-size:clamp(2.2rem,6vw,3.6rem)" data-i18n="menu.title">Menu &amp; Pricing</h1>
+  </div>
+</section>
+
+<section style="padding:1rem 0">
+  <div class="wrap"><div class="gallery" id="menu-gallery"></div></div>
+</section>
+
+<section style="padding-top:2rem">
+  <div class="wrap">
+
+    <div class="menu-block">
+      <h2 data-i18n="menu.rooms">KTV Rooms</h2>
+      <ul class="price-list">
+        <li><span class="pname">Small Room <small>4–6 persons</small></span><span class="dots"></span><span class="pcost">฿800 / 2hr</span></li>
+        <li><span class="pname">Large Room <small>8–12 persons</small></span><span class="dots"></span><span class="pcost">฿1,200 / 2hr</span></li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="menu-block" id="massage">
+      <h2 data-i18n="menu.massage">Massage &amp; Spa</h2>
+      <ul class="price-list">
+        <li><span class="pname">Thai Massage <small>shower room · 40 / 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿2,000 / 2,500 / 3,000</span></li>
+        <li><span class="pname">Oil + Soapy <small>jacuzzi · 40 / 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿2,400 / 2,800 / 3,400</span></li>
+        <li><span class="pname">B2B + Soapy <small>jacuzzi · 40 / 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿2,700 / 3,100 / 3,700</span></li>
+        <li><span class="pname">B2B + Soapy <small>2 ladies · 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿5,900 / 7,000</span></li>
+        <li><span class="pname">Nuru Massage <small>VIP · 40 / 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿3,000 / 3,800 / 5,000</span></li>
+        <li><span class="pname">Nuru Massage <small>2 ladies · 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿7,500 / 8,900</span></li>
+      </ul>
+    </div>
+
+    <div class="menu-block">
+      <h2><span data-i18n="menu.special">Special Course</span> <small style="font-family:var(--sans);font-size:.8rem;color:var(--muted)" data-i18n="menu.special.sub">· VIP room</small></h2>
+      <ul class="price-list">
+        <li><span class="pname">Nuru <small>1 lady · 2 guests · 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿6,500 / 7,900</span></li>
+        <li><span class="pname">Nuru <small>2 ladies · 2 guests · 60 / 90 min</small></span><span class="dots"></span><span class="pcost">฿7,900 / 9,500</span></li>
+      </ul>
+    </div>
+
+    <div class="menu-block">
+      <h2 data-i18n="menu.longtime">Long Time / Take Out</h2>
+      <ul class="price-list">
+        <li><span class="pname">2 Hours</span><span class="dots"></span><span class="pcost">฿3,900</span></li>
+        <li><span class="pname">4 Hours</span><span class="dots"></span><span class="pcost">฿6,000</span></li>
+        <li><span class="pname">6 Hours</span><span class="dots"></span><span class="pcost">฿8,500</span></li>
+        <li><span class="pname">1 Day</span><span class="dots"></span><span class="pcost">฿14,000</span></li>
+      </ul>
+    </div>
+
+
+    <div style="text-align:center;margin-top:2rem">
+      <a href="book.html" class="btn btn-gold" data-i18n="menu.bookbtn">Book a Room</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<script src="assets.js"></script>
+<script src="i18n.js"></script>
+<script src="shared.js"></script>
+<script>
+mountChrome('menu.html');
+document.getElementById('menu-gallery').innerHTML = `
+  <div class="tile"><img src="${LN_IMG.ktv_room}" alt="KTV"></div>
+  <div class="tile"><img src="${LN_IMG.jacuzzi}" alt="Jacuzzi"></div>
+  <div class="tile"><img src="${LN_IMG.shower}" alt="Shower room"></div>`;
+</script>
+</body>
+</html>
