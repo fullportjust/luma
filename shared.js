@@ -50,7 +50,7 @@ function buildFooter(){
         <h4 data-i18n="foot.connect">Connect</h4>
         <div style="display:flex;flex-direction:column;gap:.3rem">
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">💚 LINE: @luminuru</a>
-          <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">💬 WhatsApp: +66 XX XXX XXXX</a>
+          <a href="https://wa.me/660828943665" style="color:var(--ink);font-size:.88rem;text-decoration:none">💬 WhatsApp: +66 082 894 3665</a>
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">🟢 WeChat: luminuru</a>
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">📷 Instagram: @luminuru</a>
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">✖ X: @luminuru</a>
