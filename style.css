@@ -183,3 +183,7 @@ a.ci-val:hover{color:var(--gold-bright)}
 .why-card .wi{font-size:2rem;margin-bottom:.5rem}
 .why-card h3{font-family:var(--serif);font-size:1.2rem;color:var(--gold-bright);margin-bottom:.3rem}
 .why-card p{color:var(--muted);font-size:.88rem;line-height:1.5}
+
+/* book page gallery — landscape photos shown in full, not cropped */
+.book-gallery .tile{aspect-ratio:16/10}
+.book-gallery .tile img{object-fit:cover;object-position:center}
