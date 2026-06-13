@@ -15,8 +15,8 @@ const I18N = {
 
   // ---- shared / footer ----
   "foot.tag":   { en:"Private KTV & massage lounge — karaoke rooms, drink buffets and a full spa menu.",
-                  th:"คาราโอเกะส่วนตัว & เลานจ์นวด — ห้องคาราโอเกะ บุฟเฟ่ต์เครื่องดื่ม และเมนูสปาครบครัน",
-                  zh:"私人KTV与按摩会所 — 卡拉OK包间、酒水自助和全套水疗菜单。",
+                  th:"คาราโอเกะส่วนตัว & เลานจ์นวด — ห้องคาราโอเกะและเมนูสปาครบครัน",
+                  zh:"私人KTV与按摩会所 — 卡拉OK包间和全套水疗菜单。",
                   ja:"プライベートKTV＆マッサージラウンジ — カラオケルーム、ドリンクビュッフェ、フルスパメニュー。", ko:"프라이빗 KTV & 마사지 라운지 — 노래방, 음료 뷔페, 풀 스파 메뉴." },
   "foot.open":  { en:"Open daily · 6pm–late", th:"เปิดทุกวัน · 18:00 – ดึก", zh:"每日营业 · 晚6点至深夜", ja:"年中無休 · 18時〜深夜", ko:"매일 영업 · 오후 6시 ~ 심야" },
   "foot.visit": { en:"Visit", th:"ที่ตั้ง", zh:"地址", ja:"アクセス", ko:"오시는 길" },
@@ -96,6 +96,8 @@ const I18N = {
   "foot.payment": { en:"Payment", th:"การชำระเงิน", zh:"付款方式", ja:"お支払い", ko:"결제 수단" },
   "foot.hours":   { en:"Hours", th:"เวลาทำการ", zh:"营业时间", ja:"営業時間", ko:"영업 시간" },
   "foot.connect": { en:"Connect", th:"ติดต่อ", zh:"联系我们", ja:"お問い合わせ", ko:"연락처" },
+  "home.qr.title": { en:"Contact Us Directly", th:"ติดต่อเราโดยตรง", zh:"直接联系我们", ja:"直接お問い合わせ", ko:"직접 연락하기" },
+  "home.qr.scan": { en:"Scan to chat", th:"สแกนเพื่อแชท", zh:"扫码聊天", ja:"スキャンしてチャット", ko:"스캔하여 채팅" },
   "lineup.eyebrow": { en:"Updated Daily", th:"อัปเดตทุกวัน", zh:"每日更新", ja:"毎日更新", ko:"매일 업데이트" },
   "lineup.title":   { en:"Today's Lineup", th:"ตารางงานวันนี้", zh:"今日阵容", ja:"本日のラインナップ", ko:"오늘의 라인업" },
   "lineup.sub":     { en:"Book your preferred therapist in advance — availability is limited.",

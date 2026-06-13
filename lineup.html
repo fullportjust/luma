@@ -9,22 +9,15 @@
 <body>
 <div id="nav-mount"></div>
 
-<section style="padding:3rem 0 1rem">
+<section style="padding:3rem 0 1.5rem">
   <div class="wrap">
     <p class="eyebrow" data-i18n="lineup.eyebrow">Updated Daily</p>
     <h1 class="gold" style="font-size:clamp(2.2rem,6vw,3.6rem)" data-i18n="lineup.title">Today's Lineup</h1>
     <p class="lead" style="margin-top:.5rem" data-i18n="lineup.sub">Book your preferred therapist in advance — availability is limited.</p>
-    <div class="date-badge" id="date-badge">📅 <b id="today-date"></b></div>
-  </div>
-</section>
 
-<!-- Video placeholder -->
-<section style="padding:0 0 .5rem">
-  <div class="wrap">
-    <div class="video-slot" onclick="alert('Upload your venue video here')">
-      <div class="play">▶</div>
-      <p>Upload venue / intro video here</p>
-      <p style="font-size:.76rem;opacity:.6">Recommended: 16:9 · MP4 · under 60 seconds</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.2rem">
+      <div class="date-badge">📅 <b id="today-date"></b></div>
+      <a href="book.html" class="btn btn-gold" data-i18n="home.book">Book a Room</a>
     </div>
   </div>
 </section>
@@ -33,14 +26,10 @@
 <section style="padding-top:.5rem">
   <div class="wrap">
     <div class="lineup-grid" id="lineup-grid"></div>
-
     <p class="note" style="text-align:center;margin-top:2rem">
       ★ All ladies are real — photos and availability updated daily ★<br>
       To request a specific therapist, mention their name when booking.
     </p>
-    <div style="text-align:center;margin-top:1.6rem">
-      <a href="book.html" class="btn btn-gold" data-i18n="home.book">Book a Room</a>
-    </div>
   </div>
 </section>
 
@@ -51,30 +40,22 @@
 <script>
 mountChrome('lineup.html');
 
-// Set today's date
-const now = new Date();
-document.getElementById('today-date').textContent = now.toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+// Today's date
+document.getElementById('today-date').textContent = new Date().toLocaleDateString(undefined,
+  {weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
-// Placeholder staff cards — replace photo slot with real image src when ready
-const staff = [
-  { name:"— Add Name —", status:"available" },
-  { name:"— Add Name —", status:"available" },
-  { name:"— Add Name —", status:"available" },
-  { name:"— Add Name —", status:"booked" },
-  { name:"— Add Name —", status:"available" },
-  { name:"— Add Name —", status:"available" },
-];
+// 15 staff cards — all available
+const staff = Array.from({length:15}, (_,i) => ({ num: i+1, status:"available" }));
 
-document.getElementById('lineup-grid').innerHTML = staff.map((s,i)=>`
+document.getElementById('lineup-grid').innerHTML = staff.map(s=>`
   <div class="lineup-card">
     <div class="photo-slot">
       <div class="icon">👤</div>
-      <span>Add photo ${i+1}</span>
-      <span style="font-size:.7rem;opacity:.55">Tap to replace</span>
+      <span>Add photo ${s.num}</span>
     </div>
     <div class="card-info">
-      <div class="card-name">${s.name}</div>
-      <span class="card-status status-${s.status}">${s.status==='available'?'✓ Available':'⏳ Booked'}</span>
+      <div class="card-name">— Add Name —</div>
+      <span class="card-status status-available">✓ Available</span>
     </div>
   </div>`).join('');
 </script>

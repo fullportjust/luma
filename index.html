@@ -22,10 +22,9 @@
       <a href="book.html" class="btn btn-gold" data-i18n="home.book">Book a Room</a>
       <a href="menu.html" class="btn btn-ghost" data-i18n="home.viewmenu">View Menu</a>
     </div>
+    <div id="qr-strip-mount" style="margin-top:1.6rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap"></div>
   </div>
 </section>
-
-<!-- Photo gallery -->
 <section style="padding-top:1rem">
   <div class="wrap">
     <div class="gallery" id="gallery"></div>
@@ -37,7 +36,7 @@
   <div class="wrap">
     <p class="eyebrow" data-i18n="home.offer">What we offer</p>
     <h2 class="gold" style="margin:.3rem 0 1.6rem" data-i18n="home.worlds">Two worlds, one address</h2>
-    <div class="grid cols-2" id="services"></div>
+    <div class="grid cols-3" id="services"></div>
   </div>
 </section>
 
@@ -129,10 +128,43 @@ document.getElementById('services').innerHTML = `
     <p class="price"><span data-i18n="home.from">from</span> ฿800 <span style="font-size:.85rem;color:var(--muted)">/ 2hr</span></p></div></div>
   <div class="card"><img src="${LN_IMG.massage}" alt="Massage">
     <div class="body"><h3 data-i18n="home.spa">Massage &amp; Spa</h3><p data-i18n="home.spa.d">Thai, oil, soapy &amp; Nuru courses in private rooms.</p>
-    <p class="price"><span data-i18n="home.from">from</span> ฿2,000</p></div></div>`;
+    <p class="price"><span data-i18n="home.from">from</span> ฿2,000</p></div></div>
+  <div class="card" style="cursor:pointer" onclick="window.location='lineup.html'"><img src="${LN_IMG.lounge}" alt="Today's Lineup">
+    <div class="body"><h3 data-i18n="nav.lineup">Lineup</h3><p data-i18n="lineup.sub">Book your preferred therapist — availability updated daily.</p>
+    <p class="price" style="font-size:1rem;color:var(--gold-bright)">View today →</p></div></div>`;
 
 // re-apply translations to the freshly-injected cards
 applyI18n();
+
+// QR contact strip
+document.getElementById('qr-strip-mount').innerHTML = `
+  <div class="qr-pill">
+    <img src="${LN_IMG.line_qr}" alt="LINE QR" class="qr-pill-img">
+    <div class="qr-pill-info">
+      <span class="qr-pill-icon" style="color:#06c755">💚</span>
+      <span class="qr-pill-name">LINE</span>
+      <span class="qr-pill-handle">@luminuru</span>
+      <span class="qr-pill-scan">Scan to chat</span>
+    </div>
+  </div>
+  <div class="qr-pill">
+    <img src="${LN_IMG.whatsapp_qr}" alt="WhatsApp QR" class="qr-pill-img">
+    <div class="qr-pill-info">
+      <span class="qr-pill-icon" style="color:#25d366">💬</span>
+      <span class="qr-pill-name">WhatsApp</span>
+      <span class="qr-pill-handle">+66 XX XXX XXXX</span>
+      <span class="qr-pill-scan">Scan to chat</span>
+    </div>
+  </div>
+  <div class="qr-pill">
+    <img src="${LN_IMG.wechat_qr}" alt="WeChat QR" class="qr-pill-img">
+    <div class="qr-pill-info">
+      <span class="qr-pill-icon" style="color:#07c160">🟢</span>
+      <span class="qr-pill-name">WeChat</span>
+      <span class="qr-pill-handle">luminuru</span>
+      <span class="qr-pill-scan">Scan to chat</span>
+    </div>
+  </div>`;
 </script>
 </body>
 </html>

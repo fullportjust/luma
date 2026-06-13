@@ -187,3 +187,16 @@ a.ci-val:hover{color:var(--gold-bright)}
 /* book page gallery — landscape photos shown in full, not cropped */
 .book-gallery .tile{aspect-ratio:16/10}
 .book-gallery .tile img{object-fit:cover;object-position:center}
+
+/* QR contact strip on home page */
+.qr-contact-strip{padding:.2rem 0}
+.qr-pill{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:16px;
+  padding:.9rem 1.1rem;display:flex;align-items:center;gap:.9rem;
+  transition:.25s;text-decoration:none;min-width:200px}
+.qr-pill:hover{border-color:var(--gold);background:rgba(232,195,100,.08)}
+.qr-pill-img{width:72px;height:72px;border-radius:8px;flex-shrink:0;border:2px solid rgba(255,255,255,.2)}
+.qr-pill-info{display:flex;flex-direction:column;gap:1px}
+.qr-pill-icon{font-size:1rem}
+.qr-pill-name{font-weight:600;font-size:.9rem;color:var(--ink);letter-spacing:.04em}
+.qr-pill-handle{font-size:.82rem;color:var(--muted)}
+.qr-pill-scan{font-size:.72rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
