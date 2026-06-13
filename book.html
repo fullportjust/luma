@@ -142,9 +142,9 @@ let service='KTV';
 
 mountChrome('book.html');
 document.getElementById('book-gallery').innerHTML = `
-  <div class="tile"><img src="${LN_IMG.ktv_room2}" alt="KTV"></div>
-  <div class="tile"><img src="${LN_IMG.jacuzzi_v}" alt="Massage room"></div>
-  <div class="tile"><img src="${LN_IMG.jacuzzi}" alt="Jacuzzi"></div>`;
+  <div class="tile"><img src="${LN_IMG.exterior}" alt="Lumi Nuru"></div>
+  <div class="tile"><img src="${LN_IMG.ktv}" alt="KTV room"></div>
+  <div class="tile"><img src="${LN_IMG.massage}" alt="VIP suite"></div>`;
 const timeSel=document.getElementById('time');
 const slots=[]; for(let h=18;h<=23;h++){slots.push(h+':00');slots.push(h+':30');}
 ['0:00','0:30','1:00','1:30'].forEach(t=>slots.push(t));
