@@ -25,6 +25,7 @@ nav.links a:hover,nav.links a.active{color:var(--gold-bright)}
 nav.links a.book-btn{background:var(--gold);color:#1b0f3a;font-weight:500}
 nav.links a.book-btn:hover{background:var(--gold-bright)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:40px;height:36px;cursor:pointer;color:var(--gold);font-size:1.1rem}
+.nav-right{display:flex;align-items:center;gap:.6rem}
 @media(max-width:740px){
   .burger{display:block}
   nav.links{position:fixed;inset:60px 0 auto 0;flex-direction:column;align-items:stretch;background:rgba(15,8,38,.98);padding:.5rem 1.2rem 1rem;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.3s}
@@ -115,7 +116,7 @@ footer a:hover{color:var(--gold-bright)}
 .sec-img{width:100%;border-radius:14px;border:1px solid var(--line);margin:0 0 1.2rem;display:block;object-fit:cover}
 
 /* language switcher dropdown */
-.lang-dropdown{position:relative;margin-left:.6rem}
+.lang-dropdown{position:relative}
 .lang-toggle{background:none;border:1px solid var(--line);border-radius:20px;padding:.35rem .7rem;color:var(--gold-bright);font-family:var(--sans);font-size:.82rem;cursor:pointer;white-space:nowrap}
 .lang-toggle:hover{border-color:var(--gold)}
 .lang-options{display:none;position:absolute;top:100%;right:0;margin-top:.4rem;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.3rem;min-width:100px;z-index:100}
@@ -124,7 +125,7 @@ footer a:hover{color:var(--gold-bright)}
 .lang-opt:hover{background:rgba(232,195,100,.1);color:var(--gold-bright)}
 .lang-opt.active{background:var(--gold);color:#1b0f3a;font-weight:500}
 @media(max-width:740px){
-  .lang-dropdown{margin:.6rem 0 0}
+  .lang-dropdown{margin:0}
 }
 
 /* find us / contact section */

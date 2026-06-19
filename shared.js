@@ -16,10 +16,12 @@ function buildNav(active){
   const link=(h,l,e="",key="")=>`<a href="${h}" class="${active===h?'active':''} ${e}"${key?` data-i18n="${key}"`:''}>${l}</a>`;
   return `<header class="nav"><div class="nav-inner">
     <a class="brand" href="index.html">${LN_LOGO('mark')}<span class="name">Lumi&nbsp;Nuru</span></a>
-    <button class="burger" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-right">
+      ${langSwitcherHTML()}
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
     <nav class="links" id="navlinks">
       ${link('index.html','Home','','nav.home')}${link('menu.html','Menu','','nav.menu')}${link('lineup.html','Lineup','','nav.lineup')}${link('faq.html','FAQ','','nav.faq')}${link('book.html','Book','book-btn','nav.book')}
-      ${langSwitcherHTML()}
     </nav></div></header>`;
 }
 function buildFooter(){
