@@ -76,8 +76,8 @@ function buildFooter(){
 function mountChrome(active){
   document.getElementById('nav-mount').innerHTML=buildNav(active);
   document.getElementById('footer-mount').innerHTML=buildFooter();
-  if(typeof applyI18n === 'function') applyI18n();
   injectContactWidgets();
+  if(typeof applyI18n === 'function') applyI18n();
 }
 
 /* ── Contact widgets (floating button, modal, QR modal, mobile bar) ── */
@@ -103,23 +103,23 @@ function injectContactWidgets(){
       <h3>Contact Us</h3>
       <a href="line://ti/p/4PJUKR8DAj" class="cm-btn cm-line">
         <span class="cm-icon" style="background:rgba(6,199,85,.15)">💚</span>
-        <span class="cm-label">Open in LINE<small>@luminuru</small></span>
+        <span class="cm-label"><span data-i18n="btn.open.line">Open in LINE</span><small>@luminuru</small></span>
       </a>
       <a href="https://wa.me/660828943665" target="_blank" rel="noopener" class="cm-btn cm-whatsapp">
         <span class="cm-icon" style="background:rgba(37,211,102,.15)">💬</span>
-        <span class="cm-label">Open in WhatsApp<small>+66 082 894 3665</small></span>
+        <span class="cm-label"><span data-i18n="btn.open.whatsapp">Open in WhatsApp</span><small>+66 082 894 3665</small></span>
       </a>
       <a href="weixin://dl/chat?JazzyBKK" class="cm-btn cm-wechat">
         <span class="cm-icon" style="background:rgba(7,193,96,.15)">🟢</span>
-        <span class="cm-label">Open in WeChat<small>JazzyBKK</small></span>
+        <span class="cm-label"><span data-i18n="btn.open.wechat">Open in WeChat</span><small>JazzyBKK</small></span>
       </a>
       <a href="tel:+660828943665" class="cm-btn cm-call">
         <span class="cm-icon" style="background:rgba(232,195,100,.15)">📞</span>
-        <span class="cm-label">Call Now<small>+66 082 894 3665</small></span>
+        <span class="cm-label"><span data-i18n="btn.call.now">Call Now</span><small>+66 082 894 3665</small></span>
       </a>
       <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener" class="cm-btn cm-maps">
         <span class="cm-icon" style="background:rgba(66,133,244,.15)">📍</span>
-        <span class="cm-label">Get Directions<small>Open in Google Maps</small></span>
+        <span class="cm-label"><span data-i18n="btn.get.directions">Get Directions</span><small data-i18n="btn.open.maps">Open in Google Maps</small></span>
       </a>
     </div>`;
   overlay.onclick = e => { if(e.target === overlay) closeContactModal(); };
@@ -134,8 +134,8 @@ function injectContactWidgets(){
     <img id="qr-modal-img" src="" alt="QR Code">
     <h4 id="qr-modal-title"></h4>
     <p class="qr-sub" id="qr-modal-sub"></p>
-    <span class="qr-scan-label">Scan with your phone</span>
-    <button class="copy-btn" id="qr-copy-btn" onclick="copyQRHandle()">📋 Copy LINE ID: @luminuru</button>
+    <span class="qr-scan-label" data-i18n="qr.scan.phone">Scan with your phone</span>
+    <button class="copy-btn" id="qr-copy-btn" onclick="copyQRHandle()" data-i18n="qr.copy.lineid">📋 Copy LINE ID: @luminuru</button>
   </div>`;
   qrOverlay.onclick = e => { if(e.target === qrOverlay) closeQRModal(); };
   document.body.appendChild(qrOverlay);
@@ -144,9 +144,9 @@ function injectContactWidgets(){
   const bar = document.createElement('div');
   bar.className = 'mobile-bottom-bar';
   bar.innerHTML = `
-    <a href="tel:+660828943665" class="mbb-btn"><span class="mbb-icon">📞</span><span class="mbb-label">Call</span></a>
+    <a href="tel:+660828943665" class="mbb-btn"><span class="mbb-icon">📞</span><span class="mbb-label" data-i18n="btn.call">Call</span></a>
     <a href="line://ti/p/4PJUKR8DAj" class="mbb-btn"><span class="mbb-icon">💬</span><span class="mbb-label">LINE</span></a>
-    <a href="book.html" class="mbb-btn"><span class="mbb-icon">📅</span><span class="mbb-label">Book</span></a>`;
+    <a href="book.html" class="mbb-btn"><span class="mbb-icon">📅</span><span class="mbb-label" data-i18n="nav.book">Book</span></a>`;
   document.body.appendChild(bar);
 }
 
@@ -160,8 +160,7 @@ function openQRModal(src, title, sub, handle){
   document.getElementById('qr-modal-img').src = src;
   document.getElementById('qr-modal-title').textContent = title;
   document.getElementById('qr-modal-sub').textContent = sub;
-  const copyBtn = document.getElementById('qr-copy-btn');
-  copyBtn.textContent = '📋 Copy LINE ID: @luminuru';
+  document.getElementById('qr-copy-btn').textContent = t('qr.copy.lineid');
   document.getElementById('qr-modal-overlay').classList.add('open');
 }
 function closeQRModal(){
@@ -169,9 +168,9 @@ function closeQRModal(){
 }
 function copyQRHandle(){
   navigator.clipboard.writeText('@luminuru').then(()=>{
-    document.getElementById('qr-copy-btn').textContent = '✅ Copied!';
-    setTimeout(()=>{ document.getElementById('qr-copy-btn').textContent = '📋 Copy LINE ID: @luminuru'; }, 2000);
+    document.getElementById('qr-copy-btn').textContent = t('qr.copied');
+    setTimeout(()=>{ document.getElementById('qr-copy-btn').textContent = t('qr.copy.lineid'); }, 2000);
   }).catch(()=>{
-    document.getElementById('qr-copy-btn').textContent = '📋 Copy LINE ID: @luminuru';
+    document.getElementById('qr-copy-btn').textContent = t('qr.copy.lineid');
   });
 }

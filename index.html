@@ -24,10 +24,10 @@
     </div>
     <div id="qr-strip-mount" style="margin-top:1.6rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap"></div>
     <div class="mobile-contact-btns" style="margin-top:1.2rem">
-      <a href="line://ti/p/4PJUKR8DAj">💚 Open in LINE</a>
-      <a href="https://wa.me/660828943665" target="_blank" rel="noopener">💬 WhatsApp</a>
-      <a href="tel:+660828943665">📞 Call Now</a>
-      <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener">📍 Directions</a>
+      <a href="line://ti/p/4PJUKR8DAj">💚 <span data-i18n="btn.open.line">Open in LINE</span></a>
+      <a href="https://wa.me/660828943665" target="_blank" rel="noopener">💬 <span data-i18n="btn.open.whatsapp">Open in WhatsApp</span></a>
+      <a href="tel:+660828943665">📞 <span data-i18n="btn.call.now">Call Now</span></a>
+      <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener">📍 <span data-i18n="btn.get.directions">Get Directions</span></a>
     </div>
   </div>
 </section>
@@ -167,39 +167,39 @@ applyI18n();
 
 // QR contact strip
 document.getElementById('qr-strip-mount').innerHTML = `
-  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.line_qr}','LINE','Scan to chat on your phone','@luminuru')">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.line_qr}','LINE',t('qr.scan.modal.sub'),'@luminuru')">
     <img src="${LN_IMG.line_qr}" alt="LINE QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#06c755">💚</span>
       <span class="qr-pill-name">LINE</span>
       <span class="qr-pill-handle">@luminuru</span>
-      <span class="qr-pill-scan">Scan to chat</span>
+      <span class="qr-pill-scan">${t('qr.scan.pill')}</span>
     </div>
   </div>
-  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.whatsapp_qr}','WhatsApp','Scan to chat on your phone','+66 082 894 3665')">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.whatsapp_qr}','WhatsApp',t('qr.scan.modal.sub'),'+66 082 894 3665')">
     <img src="${LN_IMG.whatsapp_qr}" alt="WhatsApp QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#25d366">💬</span>
       <span class="qr-pill-name">WhatsApp</span>
       <span class="qr-pill-handle">+66 082 894 3665</span>
-      <span class="qr-pill-scan">Scan to chat</span>
+      <span class="qr-pill-scan">${t('qr.scan.pill')}</span>
     </div>
   </div>
-  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.wechat_qr}','WeChat','Scan to chat on your phone','JazzyBKK')">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.wechat_qr}','WeChat',t('qr.scan.modal.sub'),'JazzyBKK')">
     <img src="${LN_IMG.wechat_qr}" alt="WeChat QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#07c160">🟢</span>
       <span class="qr-pill-name">WeChat</span>
       <span class="qr-pill-handle">JazzyBKK</span>
-      <span class="qr-pill-scan">Scan to chat</span>
+      <span class="qr-pill-scan">${t('qr.scan.pill')}</span>
     </div>
   </div>
   <div class="qr-mobile-only" style="display:none;width:100%">
-    <a href="line://ti/p/4PJUKR8DAj" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(6,199,85,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">💚 Open in LINE</a>
-    <a href="https://wa.me/660828943665" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(37,211,102,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">💬 Open in WhatsApp</a>
-    <a href="weixin://dl/chat?JazzyBKK" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(7,193,96,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">🟢 Open in WeChat</a>
-    <a href="tel:+660828943665" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(232,195,100,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">📞 Call Now</a>
-    <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(66,133,244,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600">📍 Get Directions</a>
+    <a href="line://ti/p/4PJUKR8DAj" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(6,199,85,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">💚 <span data-i18n="btn.open.line">Open in LINE</span></a>
+    <a href="https://wa.me/660828943665" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(37,211,102,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">💬 <span data-i18n="btn.open.whatsapp">Open in WhatsApp</span></a>
+    <a href="weixin://dl/chat?JazzyBKK" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(7,193,96,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">🟢 <span data-i18n="btn.open.wechat">Open in WeChat</span></a>
+    <a href="tel:+660828943665" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(232,195,100,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600;margin-bottom:.5rem">📞 <span data-i18n="btn.call.now">Call Now</span></a>
+    <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:rgba(66,133,244,.12);border-radius:12px;text-decoration:none;color:var(--gold-bright);font-weight:600">📍 <span data-i18n="btn.get.directions">Get Directions</span></a>
   </div>`;
 </script>
 </body>
