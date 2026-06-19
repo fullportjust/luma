@@ -258,11 +258,11 @@ a.ci-val:hover{color:var(--gold-bright)}
 .qr-pill-desktop:hover .qr-pill-scan{color:var(--gold-bright)}
 
 /* Sticky mobile bottom bar */
-.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:85;background:rgba(15,8,38,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.6rem .8rem;padding-bottom:max(.6rem,env(safe-area-inset-bottom))}
+.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:85;background:rgba(15,8,38,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.6rem .8rem;padding-bottom:max(.6rem,env(safe-area-inset-bottom));min-height:56px;box-sizing:border-box}
 @media(max-width:768px){
   .mobile-bottom-bar{display:flex!important;justify-content:space-around;align-items:center}
-  body{padding-bottom:72px}
-  .float-contact-btn{bottom:calc(72px + 16px)}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom, 0px))}
+  .float-contact-btn{bottom:calc(80px + env(safe-area-inset-bottom, 0px) + 16px)}
 }
 .mbb-btn{display:flex;flex-direction:column;align-items:center;gap:.2rem;text-decoration:none;color:var(--ink);font-size:.72rem;letter-spacing:.06em;padding:.4rem .8rem;border-radius:10px;transition:.2s;min-width:64px}
 .mbb-btn:hover{background:rgba(232,195,100,.1)}
