@@ -9,27 +9,16 @@
 <body>
 <div id="nav-mount"></div>
 
-<section style="padding:3rem 0 1.5rem">
-  <div class="wrap">
-    <p class="eyebrow" data-i18n="lineup.eyebrow">Updated Daily</p>
-    <h1 class="gold" style="font-size:clamp(2.2rem,6vw,3.6rem)" data-i18n="lineup.title">Today's Lineup</h1>
-    <p class="lead" style="margin-top:.5rem" data-i18n="lineup.sub">Book your preferred therapist in advance — availability is limited.</p>
-
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.2rem">
-      <div class="date-badge">📅 <b id="today-date"></b></div>
-      <a href="book.html" class="btn btn-gold" data-i18n="home.book">Book a Room</a>
+<section style="padding:5rem 0 3rem;text-align:center">
+  <div class="wrap" style="max-width:600px;margin:0 auto">
+    <div style="font-size:3.5rem;margin-bottom:1.2rem">👩‍🦰</div>
+    <p class="eyebrow">Coming Soon</p>
+    <h1 class="gold" style="font-size:clamp(2rem,5vw,3rem);margin-bottom:.8rem">Daily Lineup</h1>
+    <p class="lead" style="color:var(--muted);margin:0 auto 2rem">Our daily therapist lineup is being finalized. In the meantime, you can still book your preferred room and time — just mention who you'd like in the special requests.</p>
+    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+      <a href="book.html" class="btn btn-gold">Book a Room</a>
+      <a href="line://ti/p/4PJUKR8DAj" class="btn btn-ghost">Message on LINE</a>
     </div>
-  </div>
-</section>
-
-<!-- Staff gallery -->
-<section style="padding-top:.5rem">
-  <div class="wrap">
-    <div class="lineup-grid" id="lineup-grid"></div>
-    <p class="note" style="text-align:center;margin-top:2rem">
-      ★ All ladies are real — photos and availability updated daily ★<br>
-      To request a specific therapist, mention their name when booking.
-    </p>
   </div>
 </section>
 
@@ -37,27 +26,6 @@
 <script src="assets.js"></script>
 <script src="i18n.js"></script>
 <script src="shared.js"></script>
-<script>
-mountChrome('lineup.html');
-
-// Today's date
-document.getElementById('today-date').textContent = new Date().toLocaleDateString(undefined,
-  {weekday:'long',day:'numeric',month:'long',year:'numeric'});
-
-// 15 staff cards — all available
-const staff = Array.from({length:15}, (_,i) => ({ num: i+1, status:"available" }));
-
-document.getElementById('lineup-grid').innerHTML = staff.map(s=>`
-  <div class="lineup-card">
-    <div class="photo-slot">
-      <div class="icon">👤</div>
-      <span>Add photo ${s.num}</span>
-    </div>
-    <div class="card-info">
-      <div class="card-name">— Add Name —</div>
-      <span class="card-status status-available">✓ Available</span>
-    </div>
-  </div>`).join('');
-</script>
+<script>mountChrome('lineup.html');</script>
 </body>
 </html>
