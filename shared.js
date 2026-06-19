@@ -107,6 +107,10 @@ function injectContactWidgets(){
         <span class="cm-icon" style="background:rgba(37,211,102,.15)">💬</span>
         <span class="cm-label">Open in WhatsApp<small>+66 082 894 3665</small></span>
       </a>
+      <a href="weixin://dl/chat?JazzyBKK" class="cm-btn cm-wechat">
+        <span class="cm-icon" style="background:rgba(7,193,96,.15)">🟢</span>
+        <span class="cm-label">Open in WeChat<small>JazzyBKK</small></span>
+      </a>
       <a href="tel:+660828943665" class="cm-btn cm-call">
         <span class="cm-icon" style="background:rgba(232,195,100,.15)">📞</span>
         <span class="cm-label">Call Now<small>+66 082 894 3665</small></span>
