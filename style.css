@@ -114,15 +114,17 @@ footer a:hover{color:var(--gold-bright)}
 /* menu section banner images */
 .sec-img{width:100%;border-radius:14px;border:1px solid var(--line);margin:0 0 1.2rem;display:block;object-fit:cover}
 
-/* language switcher */
-.lang-switch{display:flex;gap:.15rem;margin-left:.6rem;border:1px solid var(--line);border-radius:20px;padding:.15rem;background:rgba(15,8,38,.4)}
-.lang-opt{background:none;border:none;cursor:pointer;color:var(--muted);font-family:var(--sans);
-  font-size:.72rem;letter-spacing:.04em;padding:.3rem .55rem;border-radius:16px;transition:.2s}
-.lang-opt:hover{color:var(--gold-bright)}
+/* language switcher dropdown */
+.lang-dropdown{position:relative;margin-left:.6rem}
+.lang-toggle{background:none;border:1px solid var(--line);border-radius:20px;padding:.35rem .7rem;color:var(--gold-bright);font-family:var(--sans);font-size:.82rem;cursor:pointer;white-space:nowrap}
+.lang-toggle:hover{border-color:var(--gold)}
+.lang-options{display:none;position:absolute;top:100%;right:0;margin-top:.4rem;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.3rem;min-width:100px;z-index:100}
+.lang-dropdown.open .lang-options{display:block}
+.lang-opt{display:block;width:100%;background:none;border:none;cursor:pointer;color:var(--muted);font-family:var(--sans);font-size:.85rem;padding:.45rem .7rem;border-radius:8px;text-align:left}
+.lang-opt:hover{background:rgba(232,195,100,.1);color:var(--gold-bright)}
 .lang-opt.active{background:var(--gold);color:#1b0f3a;font-weight:500}
 @media(max-width:740px){
-  .lang-switch{margin:.6rem 0 0;justify-content:center}
-  .lang-opt{font-size:.85rem;padding:.5rem .8rem}
+  .lang-dropdown{margin:.6rem 0 0}
 }
 
 /* find us / contact section */

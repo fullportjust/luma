@@ -154,12 +154,22 @@ function applyI18n(){
   document.querySelectorAll('.lang-opt').forEach(o=>{
     o.classList.toggle('active', o.dataset.lang===lang);
   });
+  // update dropdown toggle text
+  document.querySelectorAll('.lang-toggle').forEach(btn=>{
+    btn.innerHTML = '🌐 ' + (LANGS[lang] || 'EN');
+  });
 }
 
 // build the language switcher markup
 function langSwitcherHTML(){
-  return `<div class="lang-switch"><span class="lang-label" data-i18n="nav.language">Language</span>` +
-    Object.entries(LANGS).map(([code,label])=>
-      `<button class="lang-opt" data-lang="${code}" onclick="setLang('${code}')">${label}</button>`
-    ).join('') + `</div>`;
+  const current = getLang();
+  const currentLabel = LANGS[current] || 'EN';
+  return `<div class="lang-dropdown">
+    <button class="lang-toggle" onclick="this.parentElement.classList.toggle('open')">🌐 ${currentLabel}</button>
+    <div class="lang-options">
+      ${Object.entries(LANGS).map(([code,label])=>
+        `<button class="lang-opt${code===current?' active':''}" data-lang="${code}" onclick="setLang('${code}');this.closest('.lang-dropdown').classList.remove('open')">${label}</button>`
+      ).join('')}
+    </div>
+  </div>`;
 }
