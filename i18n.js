@@ -114,8 +114,21 @@ const I18N = {
   "home.findus.phone":   { en:"Phone / WhatsApp", th:"โทรศัพท์", zh:"电话", ja:"電話", ko:"전화" },
 };
 
-// current language (remembered in the browser)
-function getLang(){ return localStorage.getItem('ln_lang') || 'en'; }
+// auto-detect browser language on first visit, then respect saved choice
+const LANG_MAP = { zh:'zh', 'zh-CN':'zh', 'zh-TW':'zh', ja:'ja', ko:'ko', th:'th', fr:'fr', de:'de', es:'es', pt:'pt' };
+function getLang(){
+  const saved = localStorage.getItem('ln_lang');
+  if(saved) return saved;
+  // first visit: detect from browser
+  const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  for(const [prefix, code] of Object.entries(LANG_MAP)){
+    if(nav === prefix || nav.startsWith(prefix + '-')){
+      localStorage.setItem('ln_lang', code);
+      return code;
+    }
+  }
+  return 'en';
+}
 function setLang(l){ localStorage.setItem('ln_lang', l); applyI18n(); }
 
 function t(key){
