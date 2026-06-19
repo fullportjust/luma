@@ -10,7 +10,7 @@ const LN_LOGO = (cls="") => `
     <path d="M112 92 h20 l24 46 V92 h20 v94 h-20 l-24 -46 v46 h-20 Z"/></g>
 </svg>`;
 
-const PHONE="+66 082 894 3665", PHONE_TEL="tel:+660828943665", LINE_ID="@luminuru", LINE_DEEP="line://ti/p/@luminuru", WA_URL="https://wa.me/660828943665", ADDR="Bangkok, Thailand", MAPS_URL="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA";
+const PHONE="+66 082 894 3665", PHONE_TEL="tel:+660828943665", LINE_ID="@luminuru", LINE_DEEP="line://ti/p/4PJUKR8DAj", WA_URL="https://wa.me/660828943665", WA_QR="https://wa.me/qr/TH2MCJADMW2XI1", ADDR="Bangkok, Thailand", MAPS_URL="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA";
 
 function buildNav(active){
   const link=(h,l,e="",key="")=>`<a href="${h}" class="${active===h?'active':''} ${e}"${key?` data-i18n="${key}"`:''}>${l}</a>`;
@@ -99,7 +99,7 @@ function injectContactWidgets(){
     <div class="contact-modal">
       <div class="cm-handle"></div>
       <h3>Contact Us</h3>
-      <a href="line://ti/p/@luminuru" class="cm-btn cm-line">
+      <a href="line://ti/p/4PJUKR8DAj" class="cm-btn cm-line">
         <span class="cm-icon" style="background:rgba(6,199,85,.15)">💚</span>
         <span class="cm-label">Open in LINE<small>@luminuru</small></span>
       </a>
@@ -139,7 +139,7 @@ function injectContactWidgets(){
   bar.className = 'mobile-bottom-bar';
   bar.innerHTML = `
     <a href="tel:+660828943665" class="mbb-btn"><span class="mbb-icon">📞</span><span class="mbb-label">Call</span></a>
-    <a href="line://ti/p/@luminuru" class="mbb-btn"><span class="mbb-icon">💬</span><span class="mbb-label">LINE</span></a>
+    <a href="line://ti/p/4PJUKR8DAj" class="mbb-btn"><span class="mbb-icon">💬</span><span class="mbb-label">LINE</span></a>
     <a href="book.html" class="mbb-btn"><span class="mbb-icon">📅</span><span class="mbb-label">Book</span></a>`;
   document.body.appendChild(bar);
 }
