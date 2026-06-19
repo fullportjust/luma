@@ -107,7 +107,7 @@ const I18N = {
   "btn.get.directions": { en:"Get Directions", th:"ดูแผนที่", zh:"获取路线", ja:"地図を見る", ko:"길찾기" },
   "btn.open.maps": { en:"Open in Google Maps", th:"เปิดใน Google Maps", zh:"在Google地图中打开", ja:"Googleマップで開く", ko:"Google 지도에서 열기" },
   "qr.scan.phone": { en:"Scan with your phone", th:"สแกนด้วยโทรศัพท์", zh:"用手机扫描", ja:"スマホでスキャン", ko:"핸드폰으로 스캔" },
-  "qr.copy.lineid": { en:"📋 Copy LINE ID: @luminuru", th:"📋 คัดลอก LINE ID: @luminuru", zh:"📋 复制LINE ID: @luminuru", ja:"📋 LINE IDをコピー: @luminuru", ko:"📋 LINE ID 복사: @luminuru" },
+  "qr.copy.lineid": { en:"📋 Copy LINE ID: @370nwatk", th:"📋 คัดลอก LINE ID: @370nwatk", zh:"📋 复制LINE ID: @370nwatk", ja:"📋 LINE IDをコピー: @370nwatk", ko:"📋 LINE ID 복사: @370nwatk" },
   "qr.copied": { en:"✅ Copied!", th:"✅ คัดลอกแล้ว!", zh:"✅ 已复制!", ja:"✅ コピーしました!", ko:"✅ 복사되었습니다!" },
   "qr.scan.pill": { en:"Scan to chat", th:"สแกนเพื่อแชท", zh:"扫码聊天", ja:"スキャンしてチャット", ko:"스캔하여 채팅" },
   "qr.scan.modal.sub": { en:"Scan to chat on your phone", th:"สแกนด้วยโทรศัพท์เพื่อแชท", zh:"用手机扫描聊天", ja:"スマホでスキャンしてチャット", ko:"핸드폰으로 스캔하여 채팅" },
