@@ -200,3 +200,79 @@ a.ci-val:hover{color:var(--gold-bright)}
 .qr-pill-name{font-weight:600;font-size:.9rem;color:var(--ink);letter-spacing:.04em}
 .qr-pill-handle{font-size:.82rem;color:var(--muted)}
 .qr-pill-scan{font-size:.72rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+
+/* QR desktop vs mobile */
+@media(max-width:768px){
+  .qr-pill{display:none}
+  .qr-desktop-only{display:none!important}
+  .mobile-contact-btns{display:flex!important}
+}
+@media(min-width:769px){
+  .mobile-contact-btns{display:none!important}
+}
+
+/* Mobile contact buttons (tap-to-chat) */
+.mobile-contact-btns{display:none;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.mobile-contact-btns a{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.2rem;border-radius:12px;font-size:.85rem;font-weight:500;text-decoration:none;letter-spacing:.06em;border:1px solid var(--line);color:var(--ink);background:var(--bg-2);transition:.2s}
+.mobile-contact-btns a:hover{border-color:var(--gold);background:rgba(232,195,100,.1)}
+
+/* Floating contact button */
+.float-contact-btn{position:fixed;bottom:100px;right:20px;z-index:90;width:56px;height:56px;border-radius:50%;background:var(--gold);color:#1b0f3a;border:none;cursor:pointer;font-size:1.5rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(232,195,100,.45);transition:.3s}
+.float-contact-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(232,195,100,.6)}
+.float-contact-btn.hidden{transform:scale(0);pointer-events:none;opacity:0}
+
+/* Contact modal overlay */
+.contact-modal-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:.3s}
+.contact-modal-overlay.open{opacity:1;pointer-events:all}
+.contact-modal{background:var(--bg-2);border:1px solid var(--line);border-radius:20px 20px 0 0;width:100%;max-width:420px;max-height:85vh;overflow-y:auto;padding:1.6rem 1.4rem 2rem;transform:translateY(100%);transition:.35s}
+.contact-modal-overlay.open .contact-modal{transform:translateY(0)}
+.contact-modal .cm-handle{width:40px;height:4px;background:var(--line);border-radius:4px;margin:0 auto 1rem}
+.contact-modal h3{font-family:var(--serif);color:var(--gold-bright);font-size:1.4rem;text-align:center;margin-bottom:1.2rem}
+.cm-btn{display:flex;align-items:center;gap:.8rem;width:100%;padding:.85rem 1rem;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--ink);font-size:.95rem;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:.2s;margin-bottom:.6rem}
+.cm-btn:hover{border-color:var(--gold);background:rgba(232,195,100,.08)}
+.cm-btn .cm-icon{font-size:1.3rem;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cm-btn .cm-label{flex:1}
+.cm-btn .cm-label small{display:block;color:var(--muted);font-size:.78rem}
+.cm-line{border-color:rgba(6,199,85,.4)}
+.cm-line:hover{border-color:#06c755;background:rgba(6,199,85,.08)}
+.cm-whatsapp{border-color:rgba(37,211,102,.4)}
+.cm-whatsapp:hover{border-color:#25d366;background:rgba(37,211,102,.08)}
+.cm-call{border-color:rgba(232,195,100,.4)}
+.cm-call:hover{border-color:var(--gold);background:rgba(232,195,100,.08)}
+.cm-maps{border-color:rgba(66,133,244,.4)}
+.cm-maps:hover{border-color:#4285f4;background:rgba(66,133,244,.08)}
+
+/* QR modal */
+.qr-modal-overlay{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.3s}
+.qr-modal-overlay.open{opacity:1;pointer-events:all}
+.qr-modal{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:2rem;max-width:340px;width:90%;text-align:center;transform:scale(.9);transition:.3s}
+.qr-modal-overlay.open .qr-modal{transform:scale(1)}
+.qr-modal img{width:180px;height:180px;border-radius:10px;margin:0 auto 1rem;border:2px solid rgba(255,255,255,.2)}
+.qr-modal h4{font-family:var(--serif);color:var(--gold-bright);font-size:1.2rem;margin-bottom:.3rem}
+.qr-modal .qr-sub{color:var(--muted);font-size:.88rem;margin-bottom:1rem}
+.qr-modal .qr-scan-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.qr-modal .copy-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.85rem;cursor:pointer;font-family:var(--sans);transition:.2s}
+.qr-modal .copy-btn:hover{border-color:var(--gold);background:rgba(232,195,100,.1)}
+.qr-modal .close-modal{position:absolute;top:12px;right:16px;background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer}
+.qr-pill-desktop{cursor:pointer}
+.qr-pill-desktop:hover .qr-pill-scan{color:var(--gold-bright)}
+
+/* Sticky mobile bottom bar */
+.mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:85;background:rgba(15,8,38,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.6rem .8rem;padding-bottom:max(.6rem,env(safe-area-inset-bottom))}
+@media(max-width:768px){
+  .mobile-bottom-bar{display:flex!important;justify-content:space-around;align-items:center}
+  body{padding-bottom:72px}
+  .float-contact-btn{bottom:calc(72px + 16px)}
+}
+.mbb-btn{display:flex;flex-direction:column;align-items:center;gap:.2rem;text-decoration:none;color:var(--ink);font-size:.72rem;letter-spacing:.06em;padding:.4rem .8rem;border-radius:10px;transition:.2s;min-width:64px}
+.mbb-btn:hover{background:rgba(232,195,100,.1)}
+.mbb-btn .mbb-icon{font-size:1.4rem}
+.mbb-btn .mbb-label{font-weight:500;color:var(--gold-bright)}
+
+/* Starting prices section */
+.prices-strip{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:1.6rem 0 .4rem}
+.price-chip{background:rgba(232,195,100,.08);border:1px solid var(--line);border-radius:14px;padding:.9rem 1.4rem;text-align:center;min-width:180px;transition:.25s}
+.price-chip:hover{border-color:var(--gold);transform:translateY(-2px)}
+.price-chip .pc-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.price-chip .pc-price{font-family:var(--serif);font-size:1.6rem;color:var(--gold-bright);font-weight:700}
+.price-chip .pc-from{font-size:.78rem;color:var(--muted);margin-top:.15rem}

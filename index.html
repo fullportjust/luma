@@ -23,6 +23,12 @@
       <a href="menu.html" class="btn btn-ghost" data-i18n="home.viewmenu">View Menu</a>
     </div>
     <div id="qr-strip-mount" style="margin-top:1.6rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap"></div>
+    <div class="mobile-contact-btns" style="margin-top:1.2rem">
+      <a href="line://ti/p/@luminuru">💚 Open in LINE</a>
+      <a href="https://wa.me/660828943665" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a href="tel:+660828943665">📞 Call Now</a>
+      <a href="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA" target="_blank" rel="noopener">📍 Directions</a>
+    </div>
   </div>
 </section>
 <section style="padding-top:1rem">
@@ -50,6 +56,29 @@
         <span style="color:var(--muted);text-decoration:line-through">฿6,100</span>
         <b style="color:var(--gold-bright);font-size:1.25rem"> ฿4,900</b></p>
       <a href="book.html" class="btn btn-gold" data-i18n="home.reservecombo">Reserve the combo</a>
+    </div>
+  </div>
+</section>
+
+<!-- Starting Prices -->
+<section style="padding-top:0;padding-bottom:0">
+  <div class="wrap" style="text-align:center">
+    <div class="prices-strip">
+      <a href="menu.html" class="price-chip" style="text-decoration:none">
+        <div class="pc-label">Nuru Massage</div>
+        <div class="pc-price">฿2,000</div>
+        <div class="pc-from">starting price</div>
+      </a>
+      <a href="menu.html" class="price-chip" style="text-decoration:none">
+        <div class="pc-label">KTV Rooms</div>
+        <div class="pc-price">฿800</div>
+        <div class="pc-from">starting price</div>
+      </a>
+      <a href="book.html" class="price-chip" style="text-decoration:none">
+        <div class="pc-label">KTV + Nuru Combo</div>
+        <div class="pc-price">฿4,900</div>
+        <div class="pc-from">save ฿1,200</div>
+      </a>
     </div>
   </div>
 </section>
@@ -89,14 +118,14 @@
           <span class="ci-icon">📞</span>
           <div>
             <div class="ci-label" data-i18n="home.findus.phone">Phone</div>
-            <a href="tel:+6620000000" class="ci-val">+66 2 000 0000</a>
+            <a href="tel:+660828943665" class="ci-val">+66 082 894 3665</a>
           </div>
         </div>
         <div class="ci-row">
           <span class="ci-icon">💬</span>
           <div>
             <div class="ci-label">LINE</div>
-            <div class="ci-val">@luminuru</div>
+            <a href="line://ti/p/@luminuru" class="ci-val">@luminuru</a>
           </div>
         </div>
         <a href="book.html" class="btn btn-gold" style="margin-top:1.4rem;width:100%;justify-content:center" data-i18n="home.book">Book a Room</a>
@@ -138,7 +167,7 @@ applyI18n();
 
 // QR contact strip
 document.getElementById('qr-strip-mount').innerHTML = `
-  <div class="qr-pill">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.line_qr}','LINE','Scan to chat on your phone','@luminuru')">
     <img src="${LN_IMG.line_qr}" alt="LINE QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#06c755">💚</span>
@@ -147,7 +176,7 @@ document.getElementById('qr-strip-mount').innerHTML = `
       <span class="qr-pill-scan">Scan to chat</span>
     </div>
   </div>
-  <div class="qr-pill">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.whatsapp_qr}','WhatsApp','Scan to chat on your phone','+66 082 894 3665')">
     <img src="${LN_IMG.whatsapp_qr}" alt="WhatsApp QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#25d366">💬</span>
@@ -156,7 +185,7 @@ document.getElementById('qr-strip-mount').innerHTML = `
       <span class="qr-pill-scan">Scan to chat</span>
     </div>
   </div>
-  <div class="qr-pill">
+  <div class="qr-pill qr-pill-desktop qr-desktop-only" onclick="openQRModal('${LN_IMG.wechat_qr}','WeChat','Scan to chat on your phone','luminuru')">
     <img src="${LN_IMG.wechat_qr}" alt="WeChat QR" class="qr-pill-img">
     <div class="qr-pill-info">
       <span class="qr-pill-icon" style="color:#07c160">🟢</span>
