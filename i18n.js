@@ -116,17 +116,32 @@ const I18N = {
 };
 
 // auto-detect browser language on first visit, then respect saved choice
-const LANG_MAP = { zh:'zh', 'zh-CN':'zh', 'zh-TW':'zh', ja:'ja', ko:'ko', th:'th', fr:'fr', de:'de', es:'es', pt:'pt' };
+const LANG_MAP = { 'zh':'zh', 'zh-cn':'zh', 'zh-tw':'zh', 'zh-hans':'zh', 'zh-hant':'zh', 'ja':'ja', 'ko':'ko', 'th':'th', 'fr':'fr', 'de':'de', 'es':'es', 'pt':'pt' };
+function detectBrowserLang(){
+  const nav = (navigator.language || navigator.userLanguage || '').toLowerCase().replace('_','-');
+  if(LANG_MAP[nav]) return LANG_MAP[nav];
+  const base = nav.split('-')[0];
+  if(LANG_MAP[base]) return LANG_MAP[base];
+  return null;
+}
 function getLang(){
   const saved = localStorage.getItem('ln_lang');
-  if(saved) return saved;
-  // first visit: detect from browser
-  const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
-  for(const [prefix, code] of Object.entries(LANG_MAP)){
-    if(nav === prefix || nav.startsWith(prefix + '-')){
-      localStorage.setItem('ln_lang', code);
-      return code;
+  if(saved){
+    // one-time fix: if saved as 'en' but browser is non-English, update
+    if(saved === 'en'){
+      const detected = detectBrowserLang();
+      if(detected){
+        localStorage.setItem('ln_lang', detected);
+        return detected;
+      }
     }
+    return saved;
+  }
+  // first visit: detect from browser
+  const detected = detectBrowserLang();
+  if(detected){
+    localStorage.setItem('ln_lang', detected);
+    return detected;
   }
   return 'en';
 }
