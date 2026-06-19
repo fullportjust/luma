@@ -31,15 +31,24 @@ function buildFooter(){
         <h4>Lumi Nuru</h4>
         <p style="color:var(--muted);font-size:.9rem;max-width:32ch;line-height:1.6" data-i18n="foot.tag">Private KTV &amp; massage lounge — karaoke rooms and a full spa menu.</p>
         <p style="color:var(--muted);font-size:.84rem;margin-top:.5rem" data-i18n="foot.open">Open daily · 6pm – late</p>
+        <a href="book.html" class="btn btn-gold" style="margin-top:1rem;display:inline-flex" data-i18n="home.book">Book a Room</a>
       </div>
       <div>
         <h4 data-i18n="foot.visit">Visit</h4>
         <a href="${MAPS_URL}" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:.4rem;margin-bottom:.5rem;color:var(--muted);font-size:.88rem;text-decoration:none">
-          <span>📍</span><span>Lumi Nuru Massage &amp; KTV<br>[Street Address — update me]<br>Bangkok, Thailand</span>
+          <span>📍</span><span>1/34 Sukhumvit 26<br>Khlong Tan Nuea, Watthana<br>Bangkok 10110</span>
         </a>
-        <a href="${PHONE_TEL}" style="color:var(--muted);font-size:.88rem;text-decoration:none;display:block;margin-bottom:.3rem">📞 ${PHONE}</a>
-        <p style="color:var(--muted);font-size:.84rem;margin-bottom:.3rem">🚇 BTS: <b style="color:var(--ink)">[Nearest Station, Exit X]</b></p>
+        <p style="color:var(--muted);font-size:.84rem;margin-bottom:.3rem">🚇 BTS Phrom Phong · 5 min walk</p>
         <a href="${MAPS_URL}" target="_blank" rel="noopener" style="font-size:.82rem;color:var(--gold-bright);text-decoration:none" data-i18n="foot.directions">Get directions →</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot.connect">Connect</h4>
+        <div style="display:flex;flex-direction:column;gap:.4rem">
+          <a href="${PHONE_TEL}" style="color:var(--muted);font-size:.88rem;text-decoration:none">📞 ${PHONE}</a>
+          <a href="${LINE_DEEP}" style="color:var(--muted);font-size:.88rem;text-decoration:none">💚 LINE: @luminuru</a>
+          <a href="${WA_URL}" style="color:var(--muted);font-size:.88rem;text-decoration:none">💬 WhatsApp: ${PHONE}</a>
+          <a href="weixin://dl/chat?JazzyBKK" style="color:var(--muted);font-size:.88rem;text-decoration:none">🟢 WeChat: JazzyBKK</a>
+        </div>
       </div>
       <div>
         <h4 data-i18n="foot.payment">Payment</h4>
@@ -48,24 +57,6 @@ function buildFooter(){
           <span style="color:var(--ink);font-size:.88rem">💵 Cash (Thai Baht)</span>
           <span style="color:var(--ink);font-size:.88rem">📱 QR Scan (PromptPay)</span>
         </div>
-      </div>
-      <div>
-        <h4 data-i18n="foot.connect">Connect</h4>
-        <div style="display:flex;flex-direction:column;gap:.3rem">
-          <a href="${LINE_DEEP}" style="color:var(--ink);font-size:.88rem;text-decoration:none">💚 LINE: @luminuru</a>
-          <a href="${WA_URL}" style="color:var(--ink);font-size:.88rem;text-decoration:none">💬 WhatsApp: ${PHONE}</a>
-          <a href="weixin://dl/chat?JazzyBKK" style="color:var(--ink);font-size:.88rem;text-decoration:none">🟢 WeChat: JazzyBKK</a>
-          <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">📷 Instagram: @luminuru</a>
-          <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">✖ X: @luminuru</a>
-        </div>
-      </div>
-      <div>
-        <h4 data-i18n="foot.pages">Pages</h4>
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="menu.html" data-i18n="nav.menu">Menu</a>
-        <a href="lineup.html" data-i18n="nav.lineup">Lineup</a>
-        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
-        <a href="book.html" data-i18n="nav.book">Book</a>
       </div>
     </div>
     <div class="foot-divider"></div>
