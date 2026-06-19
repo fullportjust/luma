@@ -52,7 +52,7 @@ function buildFooter(){
         <div style="display:flex;flex-direction:column;gap:.3rem">
           <a href="${LINE_DEEP}" style="color:var(--ink);font-size:.88rem;text-decoration:none">💚 LINE: @luminuru</a>
           <a href="${WA_URL}" style="color:var(--ink);font-size:.88rem;text-decoration:none">💬 WhatsApp: ${PHONE}</a>
-          <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">🟢 WeChat: luminuru</a>
+          <a href="weixin://dl/chat?JazzyBKK" style="color:var(--ink);font-size:.88rem;text-decoration:none">🟢 WeChat: JazzyBKK</a>
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">📷 Instagram: @luminuru</a>
           <a href="#" style="color:var(--ink);font-size:.88rem;text-decoration:none">✖ X: @luminuru</a>
         </div>
