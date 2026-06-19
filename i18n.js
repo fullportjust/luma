@@ -79,7 +79,7 @@ const I18N = {
   "book.q1":      { en:"1 · What are you here for?", th:"1 · คุณสนใจบริการใด?", zh:"1 · 您想要什么？", ja:"1 · ご希望のサービスは？", ko:"1 · 어떤 서비스를 원하시나요?" },
   "book.q2":      { en:"2 · When?", th:"2 · เมื่อไหร่?", zh:"2 · 何时？", ja:"2 · 日時は？", ko:"2 · 언제 방문하시나요?" },
   "book.q3":      { en:"3 · How many guests?", th:"3 · กี่ท่าน?", zh:"3 · 几位客人？", ja:"3 · 何名様？", ko:"3 · 몇 분이신가요?" },
-  "book.q4":      { en:"4 · Your details", th:"4 · ข้อมูลของคุณ", zh:"4 · 您的信息", ja:"4 · お客様情報", ko:"4 · 고객 정보" },
+  "book.q4":      { en:"4 · Your name", th:"4 · ชื่อของคุณ", zh:"4 · 您的姓名", ja:"4 · お名前", ko:"4 · 고객 성함" },
   "book.svc.ktv": { en:"🎤 Private KTV", th:"🎤 คาราโอเกะส่วนตัว", zh:"🎤 私人KTV", ja:"🎤 プライベートKTV", ko:"🎤 프라이빗 KTV" },
   "book.svc.massage":{ en:"💆 Massage & Spa", th:"💆 นวด & สปา", zh:"💆 按摩与水疗", ja:"💆 マッサージ＆スパ", ko:"💆 마사지 & 스파" },
   "book.svc.combo":{ en:"✨ KTV + Massage", th:"✨ คาราโอเกะ + นวด", zh:"✨ KTV + 按摩", ja:"✨ KTV + マッサージ", ko:"✨ KTV + 마사지" },
