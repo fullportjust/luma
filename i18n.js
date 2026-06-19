@@ -12,6 +12,7 @@ const I18N = {
   "nav.menu":   { en:"Menu",  th:"เมนู",    zh:"菜单", ja:"メニュー", ko:"메뉴" },
   "nav.team":   { en:"Team",  th:"ทีมงาน",  zh:"团队", ja:"スタッフ", ko:"팀" },
   "nav.book":   { en:"Book",  th:"จอง",      zh:"预订", ja:"予約", ko:"예약" },
+  "nav.language": { en:"Language", th:"ภาษา", zh:"语言", ja:"言語", ko:"언어" },
 
   // ---- shared / footer ----
   "foot.tag":   { en:"Private KTV & massage lounge — karaoke rooms, drink buffets and a full spa menu.",
@@ -157,7 +158,7 @@ function applyI18n(){
 
 // build the language switcher markup
 function langSwitcherHTML(){
-  return `<div class="lang-switch">` +
+  return `<div class="lang-switch"><span class="lang-label" data-i18n="nav.language">Language</span>` +
     Object.entries(LANGS).map(([code,label])=>
       `<button class="lang-opt" data-lang="${code}" onclick="setLang('${code}')">${label}</button>`
     ).join('') + `</div>`;
