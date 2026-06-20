@@ -74,11 +74,8 @@
 
       <div class="field">
         <label data-i18n="book.q2">2 · When?</label>
-        <div class="date-wrap">
-          <input type="date" id="date" class="date-real">
-          <div class="date-fake" id="date-fake" onclick="document.getElementById('date').showPicker()"></div>
-        </div>
-        <select id="time" style="width:100%;margin-top:.7rem" data-i18n-placeholder="book.time.placeholder"><option value="" data-i18n="book.time.placeholder">Select a time…</option></select>
+        <div style="min-width:0;width:100%"><input type="date" id="date" style="margin-bottom:.7rem;width:100%"></div>
+        <select id="time" style="width:100%"><option value="" data-i18n="book.time.placeholder">Select a time…</option></select>
       </div>
 
       <div class="field">
@@ -140,8 +137,6 @@ for(let h=11;h<=23;h++){slots.push({v:h+':00',l:(h<12?h+':00 AM':h===12?'12:00 P
 ['00:00','00:30','01:00','01:30','02:00','02:30'].forEach(t=>{const hr=parseInt(t);slots.push({v:t,l:(hr===0?'12':hr)+t.slice(2)+' AM (next day)'});});
 slots.forEach(s=>{const o=document.createElement('option');o.value=s.v;o.textContent=s.l;timeSel.appendChild(o);});
 const d=document.getElementById('date');const today=new Date();d.min=today.toISOString().split('T')[0];d.value=today.toISOString().split('T')[0];
-function syncDateFake(){const v=d.value;if(v){const dt=new Date(v+'T00:00');document.getElementById('date-fake').textContent=dt.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short',year:'numeric'});}else{document.getElementById('date-fake').textContent=typeof t==='function'?t('book.date.placeholder'):'Pick a date…';}}
-d.addEventListener('change',syncDateFake);syncDateFake();
 
 document.querySelectorAll('#service-chips .chip').forEach(c=>{
   c.addEventListener('click',()=>{
@@ -185,7 +180,7 @@ function updateSummary(){
 }
 ['room','course','combo','date','time','guests'].forEach(id=>{const e=document.getElementById(id);if(e)e.addEventListener('change',updateSummary);});
 updateSummary();
-function onLangChange(){ syncDateFake(); updateSummary(); }
+function onLangChange(){ updateSummary(); }
 
 function toast(m){const t=document.getElementById('toast');t.innerHTML=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
 
