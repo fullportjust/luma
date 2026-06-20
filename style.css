@@ -10,7 +10,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 .wrap{max-width:1080px;margin:0 auto;padding:0 1.3rem}
 
@@ -83,13 +83,13 @@ section{padding:3.6rem 0}
 .note{color:var(--muted);font-size:.82rem;font-style:italic;margin-top:.5rem}
 .tag{display:inline-block;background:var(--gold);color:#1b0f3a;font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .6rem;border-radius:20px}
 
-.form-card{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:1.6rem}
+.form-card{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:1.6rem;overflow:hidden}
 .field{margin-bottom:1.2rem}
 .field label{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
 .field input,.field select,.field textarea{width:100%;background:rgba(15,8,38,.6);border:1px solid var(--line);border-radius:10px;padding:.8rem .95rem;color:var(--ink);font-family:var(--sans);font-size:.96rem;box-sizing:border-box}
 .field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23f6dd92' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.field input[type=date]{max-width:100%;min-width:0}
+.field input[type=date]{display:block;width:100%}
 .field select option,.field optgroup{background:#241252}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
 @media(max-width:540px){.two-col{grid-template-columns:1fr}}
