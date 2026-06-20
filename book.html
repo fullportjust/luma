@@ -171,12 +171,13 @@ function buildDetails(){
 
 function buildMsg(){
   const ref='LN-'+new Date().getFullYear()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
-  let msg=` Reservation Request — Lumi Nuru\n Ref: ${ref}\n`;
-  buildDetails().forEach(([k,v])=>{msg+=` ${k}: ${v}\n`;});
+  let msg=`Hi! I'd like to make a reservation at Lumi Nuru.`;
+  const details=buildDetails();
+  details.forEach(([k,v])=>{msg+=`\n${k}: ${v}`;});
   const nm=val('name').trim();
-  if(nm) msg+=` Name: ${nm}\n`;
-  if(val('notes').trim()) msg+=` Notes: ${val('notes').trim()}\n`;
-  msg+=`\n (No payment required — we confirm availability)`;
+  if(nm) msg+=`\nName: ${nm}`;
+  if(val('notes').trim()) msg+=`\nNote: ${val('notes').trim()}`;
+  msg+=`\n\nRef: ${ref}`;
   return {ref, msg};
 }
 
