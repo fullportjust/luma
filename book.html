@@ -197,13 +197,11 @@ function sendVia(platform){
 
   if(platform==='line'){
     navigator.clipboard.writeText(msg).then(()=>{
-      toast('✅ Message copied! Pasting into LINE…');
-      window.open('https://line.me/R/ti/p/@370nwatk', '_blank');
-    }).catch(()=>{
-      window.open('https://line.me/R/ti/p/@370nwatk', '_blank');
-    });
+      toast('✅ Message copied! Paste it in LINE.');
+    }).catch(()=>{});
+    location.href = 'https://line.me/R/ti/p/@370nwatk';
   } else if(platform==='whatsapp'){
-    window.open(`https://wa.me/660828943665?text=${encoded}`, '_blank');
+    location.href = `https://wa.me/660828943665?text=${encoded}`;
   }
 }
 </script>
