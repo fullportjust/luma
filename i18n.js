@@ -19,7 +19,7 @@ const I18N = {
                   th:"คาราโอเกะส่วนตัว & เลานจ์นวด — ห้องคาราโอเกะและเมนูสปาครบครัน",
                   zh:"私人KTV与按摩会所 — 卡拉OK包间和全套水疗菜单。",
                   ja:"プライベートKTV＆マッサージラウンジ — カラオケルーム、ドリンクビュッフェ、フルスパメニュー。", ko:"프라이빗 KTV & 마사지 라운지 — 노래방, 음료 뷔페, 풀 스파 메뉴." },
-  "foot.open":  { en:"Open daily · 6pm–late", th:"เปิดทุกวัน · 18:00 – ดึก", zh:"每日营业 · 晚6点至深夜", ja:"年中無休 · 18時〜深夜", ko:"매일 영업 · 오후 6시 ~ 심야" },
+  "foot.open":  { en:"Open daily · 11am – 3am", th:"เปิดทุกวัน · 11:00 – 03:00", zh:"每日营业 · 上午11点至凌晨3点", ja:"年中無休 · 11時〜翌3時", ko:"매일 영업 · 오전 11시 ~ 새벽 3시" },
   "foot.visit": { en:"Visit", th:"ที่ตั้ง", zh:"地址", ja:"アクセス", ko:"오시는 길" },
   "foot.pages": { en:"Pages", th:"หน้าเพจ", zh:"页面", ja:"ページ", ko:"페이지" },
   "foot.legal": { en:"Strictly 20+. Please drink responsibly. Prices in Thai Baht (฿) and subject to change.",
@@ -141,7 +141,7 @@ const I18N = {
   "home.findus.address": { en:"Address", th:"ที่อยู่", zh:"地址", ja:"住所", ko:"주소" },
   "home.findus.directions":{ en:"Get directions →", th:"เส้นทาง →", zh:"获取路线 →", ja:"道順を見る →", ko:"길 찾기 →" },
   "home.findus.hours":   { en:"Opening Hours", th:"เวลาทำการ", zh:"营业时间", ja:"営業時間", ko:"영업 시간" },
-  "home.findus.hours.val":{ en:"Daily · 6:00 PM – Late", th:"ทุกวัน · 18:00 – ดึก", zh:"每日 · 下午6点至深夜", ja:"毎日 · 18時〜深夜", ko:"매일 · 오후 6시 ~ 심야" },
+  "home.findus.hours.val":{ en:"Daily · 11:00 AM – 3:00 AM", th:"ทุกวัน · 11:00 – 03:00", zh:"每日 · 上午11点至凌晨3点", ja:"毎日 · 11時〜翌3時", ko:"매일 · 오전 11시 ~ 새벽 3시" },
   "home.findus.phone":   { en:"Phone / WhatsApp", th:"โทรศัพท์", zh:"电话", ja:"電話", ko:"전화" },
 };
 

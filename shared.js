@@ -30,7 +30,7 @@ function buildFooter(){
       <div>
         <h4>Lumi Nuru</h4>
         <p style="color:var(--muted);font-size:.9rem;max-width:32ch;line-height:1.6" data-i18n="foot.tag">Private KTV &amp; massage lounge — karaoke rooms and a full spa menu.</p>
-        <p style="color:var(--muted);font-size:.84rem;margin-top:.5rem" data-i18n="foot.open">Open daily · 6pm – late</p>
+        <p style="color:var(--muted);font-size:.84rem;margin-top:.5rem" data-i18n="foot.open">Open daily · 11am – 3am</p>
         <a href="book.html" class="btn btn-gold" style="margin-top:1rem;display:inline-flex" data-i18n="home.book">Book a Room</a>
       </div>
       <div>
