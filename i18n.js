@@ -215,7 +215,7 @@ function langSwitcherHTML(){
   const current = getLang();
   const currentLabel = LANGS[current] || 'EN';
   return `<div class="lang-dropdown">
-    <button class="lang-toggle" onclick="this.parentElement.classList.toggle('open')">🌐 ${currentLabel}</button>
+    <button class="lang-toggle" ontouchstart="event.preventDefault();this.parentElement.classList.toggle('open')" onclick="this.parentElement.classList.toggle('open')">🌐 ${currentLabel}</button>
     <div class="lang-options">
       ${Object.entries(LANGS).map(([code,label])=>
         `<button class="lang-opt${code===current?' active':''}" data-lang="${code}" onclick="setLang('${code}');this.closest('.lang-dropdown').classList.remove('open')">${label}</button>`
@@ -223,3 +223,15 @@ function langSwitcherHTML(){
     </div>
   </div>`;
 }
+
+// close dropdown when clicking outside
+document.addEventListener('click',e=>{
+  document.querySelectorAll('.lang-dropdown.open').forEach(d=>{
+    if(!d.contains(e.target)) d.classList.remove('open');
+  });
+});
+document.addEventListener('touchstart',e=>{
+  document.querySelectorAll('.lang-dropdown.open').forEach(d=>{
+    if(!d.contains(e.target)) d.classList.remove('open');
+  });
+});

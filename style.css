@@ -121,7 +121,8 @@ footer a:hover{color:var(--gold-bright)}
 .sec-img{width:100%;border-radius:14px;border:1px solid var(--line);margin:0 0 1.2rem;display:block;object-fit:cover}
 
 /* language switcher dropdown */
-.lang-dropdown{position:relative}
+.lang-dropdown{position:relative;z-index:60}
+.lang-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .lang-toggle{background:none;border:1px solid var(--line);border-radius:20px;padding:.35rem .7rem;color:var(--gold-bright);font-family:var(--sans);font-size:.82rem;cursor:pointer;white-space:nowrap}
 .lang-toggle:hover{border-color:var(--gold)}
 .lang-options{display:none;position:absolute;top:100%;right:0;margin-top:.4rem;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:.3rem;min-width:100px;z-index:100}
