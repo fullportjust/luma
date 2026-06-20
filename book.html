@@ -170,15 +170,13 @@ function buildDetails(){
 }
 
 function buildMsg(){
-  const ref='LN-'+new Date().getFullYear()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
   let msg=`Hi! I'd like to make a reservation at Lumi Nuru.`;
   const details=buildDetails();
   details.forEach(([k,v])=>{msg+=`\n${k}: ${v}`;});
   const nm=val('name').trim();
   if(nm) msg+=`\nName: ${nm}`;
   if(val('notes').trim()) msg+=`\nNote: ${val('notes').trim()}`;
-  msg+=`\n\nRef: ${ref}`;
-  return {ref, msg};
+  return msg;
 }
 
 function updateSummary(){
@@ -194,11 +192,16 @@ function sendVia(platform){
   if(!val('time')){toast('Please choose a <b>time</b>.');document.getElementById('time').focus();return;}
   if(!val('name').trim()){toast('Please add your <b>name</b>.');document.getElementById('name').focus();return;}
 
-  const {ref, msg} = buildMsg();
+  const msg = buildMsg();
   const encoded = encodeURIComponent(msg);
 
   if(platform==='line'){
-    window.open(`https://line.me/R/oaMessage/@370nwatk?text=${encoded}`, '_blank');
+    navigator.clipboard.writeText(msg).then(()=>{
+      toast('✅ Message copied! Pasting into LINE…');
+      window.open('https://line.me/R/ti/p/@370nwatk', '_blank');
+    }).catch(()=>{
+      window.open('https://line.me/R/ti/p/@370nwatk', '_blank');
+    });
   } else if(platform==='whatsapp'){
     window.open(`https://wa.me/660828943665?text=${encoded}`, '_blank');
   }
