@@ -92,6 +92,8 @@ const I18N = {
   "book.confirm.line":{ en:"Confirm via LINE", th:"ยืนยันผ่าน LINE", zh:"通过LINE确认", ja:"LINEで確認", ko:"LINE으로 확인" },
   "book.confirm.call":{ en:"Call to confirm", th:"โทรเพื่อยืนยัน", zh:"致电确认", ja:"電話で確認", ko:"전화로 확인" },
   "book.roomsize": { en:"Room size", th:"ขนาดห้อง", zh:"房间大小", ja:"ルームサイズ", ko:"룸 사이즈" },
+  "book.room.small": { en:"Small Room · 4–6 persons · ฿800 / 2hr", th:"ห้องเล็ก · 4–6 ท่าน · ฿800 / 2 ชม.", zh:"小包间 · 4–6人 · ฿800/2小时", ja:"小ルーム · 4–6名 · ฿800/2時間", ko:"소룸 · 4–6명 · ฿800/2시간" },
+  "book.room.large": { en:"Large Room · 8–12 persons · ฿1,200 / 2hr", th:"ห้องใหญ่ · 8–12 ท่าน · ฿1,200 / 2 ชม.", zh:"大包间 · 8–12人 · ฿1,200/2小时", ja:"大ルーム · 8–12名 · ฿1,200/2時間", ko:"대룸 · 8–12명 · ฿1,200/2시간" },
   "book.course":   { en:"Course", th:"คอร์ส", zh:"课程", ja:"コース", ko:"코스" },
   "book.combo":    { en:"Combo package", th:"แพ็กเกจcombo", zh:"套餐", ja:"コンボパッケージ", ko:"콤보 패키지" },
   "book.time.placeholder": { en:"Select a time…", th:"เลือกเวลา…", zh:"选择时间…", ja:"時間を選択…", ko:"시간 선택…" },
