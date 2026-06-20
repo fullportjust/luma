@@ -91,6 +91,22 @@ const I18N = {
   "book.confirm.intro":{ en:"To lock it in, send your reference to us — details are pre-filled.", th:"เพื่อยืนยัน ส่งหมายเลขอ้างอิงมาหาเรา — กรอกรายละเอียดไว้ให้แล้ว", zh:"如需确认，请将编号发送给我们 — 信息已预填。", ja:"確定するには予約番号をお送りください — 内容は入力済みです。", ko:"확정하시려면 예약 번호를 보내주세요 — 내용은 미리 입력되어 있습니다." },
   "book.confirm.line":{ en:"Confirm via LINE", th:"ยืนยันผ่าน LINE", zh:"通过LINE确认", ja:"LINEで確認", ko:"LINE으로 확인" },
   "book.confirm.call":{ en:"Call to confirm", th:"โทรเพื่อยืนยัน", zh:"致电确认", ja:"電話で確認", ko:"전화로 확인" },
+  "book.roomsize": { en:"Room size", th:"ขนาดห้อง", zh:"房间大小", ja:"ルームサイズ", ko:"룸 사이즈" },
+  "book.course":   { en:"Course", th:"คอร์ส", zh:"课程", ja:"コース", ko:"코스" },
+  "book.combo":    { en:"Combo package", th:"แพ็กเกจcombo", zh:"套餐", ja:"コンボパッケージ", ko:"콤보 패키지" },
+  "book.time.placeholder": { en:"Select a time…", th:"เลือกเวลา…", zh:"选择时间…", ja:"時間を選択…", ko:"시간 선택…" },
+  "book.guests.1": { en:"1 guest", th:"1 ท่าน", zh:"1位客人", ja:"1名様", ko:"1명" },
+  "book.guests.2": { en:"2 guests", th:"2 ท่าน", zh:"2位客人", ja:"2名様", ko:"2명" },
+  "book.guests.3": { en:"3 guests", th:"3 ท่าน", zh:"3位客人", ja:"3名様", ko:"3명" },
+  "book.guests.4": { en:"4 guests", th:"4 ท่าน", zh:"4位客人", ja:"4名様", ko:"4명" },
+  "book.guests.5": { en:"5 guests", th:"5 ท่าน", zh:"5位客人", ja:"5名様", ko:"5명" },
+  "book.guests.6": { en:"6 guests", th:"6 ท่าน", zh:"6位客人", ja:"6名様", ko:"6명" },
+  "book.guests.8": { en:"7–8 guests", th:"7–8 ท่าน", zh:"7–8位客人", ja:"7–8名様", ko:"7–8명" },
+  "book.guests.12":{ en:"9–12 guests", th:"9–12 ท่าน", zh:"9–12位客人", ja:"9–12名様", ko:"9–12명" },
+  "book.name.placeholder": { en:"Your name", th:"ชื่อของคุณ", zh:"您的姓名", ja:"お名前", ko:"고객 성함" },
+  "book.notes.label": { en:"Special requests (optional)", th:"คำขอพิเศษ (ถ้ามี)", zh:"特殊要求（可选）", ja:"特別なご要望（任意）", ko:"특별 요청 (선택사항)" },
+  "book.notes.placeholder": { en:"Preferred therapist, occasion, song list…", th:"หมอที่ต้องการ, โอกาส, รายชื่อเพลง…", zh:"指定技师、场合、歌单…", ja:"希望のセラピスト、 occasion、曲リスト…", ko:"원하는 테라피스트, 상황, 곡 목록…" },
+  "book.date.placeholder": { en:"Pick a date…", th:"เลือกวันที่…", zh:"选择日期…", ja:"日付を選択…", ko:"날짜 선택…" }
     "nav.lineup": { en:"Lineup", th:"ตารางงาน", zh:"今日阵容", ja:"ラインナップ", ko:"오늘의 라인업" },
   "nav.faq":    { en:"FAQ",    th:"คำถามที่พบบ่อย", zh:"常见问题", ja:"よくある質問", ko:"자주 묻는 질문" },
   "foot.directions": { en:"Get directions →", th:"เส้นทาง →", zh:"获取路线 →", ja:"道順 →", ko:"길 찾기 →" },
@@ -176,6 +192,9 @@ function applyI18n(){
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{
     el.innerHTML = t(el.getAttribute('data-i18n-html'));
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
   });
   // re-render any dynamic content that listens for language changes
   if(typeof onLangChange === 'function') onLangChange();

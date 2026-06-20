@@ -35,15 +35,15 @@
       </div>
 
       <div id="ktv-opts">
-        <div class="field"><label>Room size</label>
+        <div class="field"><label data-i18n="book.roomsize">Room size</label>
           <select id="room">
-            <option value="Small Room (4–6) · ฿800/2hr">Small Room · 4–6 persons · ฿800 / 2hr</option>
-            <option value="Large Room (8–12) · ฿1,200/2hr">Large Room · 8–12 persons · ฿1,200 / 2hr</option>
+            <option value="Small Room (4–6) · ฿800/2hr" data-i18n="book.room.small">Small Room · 4–6 persons · ฿800 / 2hr</option>
+            <option value="Large Room (8–12) · ฿1,200/2hr" data-i18n="book.room.large">Large Room · 8–12 persons · ฿1,200 / 2hr</option>
           </select></div>
       </div>
 
       <div id="massage-opts" style="display:none">
-        <div class="field"><label>Course</label>
+        <div class="field"><label data-i18n="book.course">Course</label>
           <select id="course">
             <optgroup label="Shower Room">
               <option>Thai Massage · 40 min · ฿2,000</option>
@@ -65,7 +65,7 @@
       </div>
 
       <div id="combo-opts" style="display:none">
-        <div class="field"><label>Combo package</label>
+        <div class="field"><label data-i18n="book.combo">Combo package</label>
           <select id="combo">
             <option value="KTV 1hr + Nuru 1hr · ฿4,900">KTV 1 hr + Nuru 1 hr · ฿4,900</option>
             <option value="KTV 30min + Massage 1hr · ฿3,500">KTV 30 min + Massage 1 hr · ฿3,500</option>
@@ -78,27 +78,27 @@
           <input type="date" id="date" class="date-real">
           <div class="date-fake" id="date-fake" onclick="document.getElementById('date').showPicker()"></div>
         </div>
-        <select id="time" style="width:100%;margin-top:.7rem"><option value="">Select a time…</option></select>
+        <select id="time" style="width:100%;margin-top:.7rem" data-i18n-placeholder="book.time.placeholder"><option value="" data-i18n="book.time.placeholder">Select a time…</option></select>
       </div>
 
       <div class="field">
         <label data-i18n="book.q3">3 · How many guests?</label>
         <select id="guests" style="width:100%">
-          <option value="1">1 guest</option><option value="2" selected>2 guests</option>
-          <option value="3">3 guests</option><option value="4">4 guests</option>
-          <option value="5">5 guests</option><option value="6">6 guests</option>
-          <option value="8">7–8 guests</option><option value="12">9–12 guests</option>
+          <option value="1" data-i18n="book.guests.1">1 guest</option><option value="2" selected data-i18n="book.guests.2">2 guests</option>
+          <option value="3" data-i18n="book.guests.3">3 guests</option><option value="4" data-i18n="book.guests.4">4 guests</option>
+          <option value="5" data-i18n="book.guests.5">5 guests</option><option value="6" data-i18n="book.guests.6">6 guests</option>
+          <option value="8" data-i18n="book.guests.8">7–8 guests</option><option value="12" data-i18n="book.guests.12">9–12 guests</option>
         </select>
       </div>
 
       <div class="field">
         <label data-i18n="book.q4">4 · Your name</label>
-        <input type="text" id="name" placeholder="Your name" style="width:100%">
+        <input type="text" id="name" data-i18n-placeholder="book.name.placeholder" placeholder="Your name" style="width:100%">
       </div>
 
       <div class="field">
-        <label>Special requests (optional)</label>
-        <textarea id="notes" rows="2" placeholder="Preferred therapist, occasion, song list…"></textarea>
+        <label data-i18n="book.notes.label">Special requests (optional)</label>
+        <textarea id="notes" rows="2" data-i18n-placeholder="book.notes.placeholder" placeholder="Preferred therapist, occasion, song list…"></textarea>
       </div>
 
       <div class="field">
@@ -141,7 +141,7 @@ for(let h=11;h<=23;h++){slots.push({v:h+':00',l:(h<12?h+':00 AM':h===12?'12:00 P
 ['00:00','00:30','01:00','01:30','02:00','02:30'].forEach(t=>{const hr=parseInt(t);slots.push({v:t,l:(hr===0?'12':hr)+t.slice(2)+' AM (next day)'});});
 slots.forEach(s=>{const o=document.createElement('option');o.value=s.v;o.textContent=s.l;timeSel.appendChild(o);});
 const d=document.getElementById('date');const today=new Date();d.min=today.toISOString().split('T')[0];d.value=today.toISOString().split('T')[0];
-function syncDateFake(){const v=d.value;if(v){const dt=new Date(v+'T00:00');document.getElementById('date-fake').textContent=dt.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short',year:'numeric'});}else{document.getElementById('date-fake').textContent='Pick a date…';}}
+function syncDateFake(){const v=d.value;if(v){const dt=new Date(v+'T00:00');document.getElementById('date-fake').textContent=dt.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short',year:'numeric'});}else{document.getElementById('date-fake').textContent=typeof t==='function'?t('book.date.placeholder'):'Pick a date…';}}
 d.addEventListener('change',syncDateFake);syncDateFake();
 
 document.querySelectorAll('#service-chips .chip').forEach(c=>{
@@ -186,7 +186,7 @@ function updateSummary(){
 }
 ['room','course','combo','date','time','guests'].forEach(id=>{const e=document.getElementById(id);if(e)e.addEventListener('change',updateSummary);});
 updateSummary();
-function onLangChange(){ updateSummary(); }
+function onLangChange(){ syncDateFake(); updateSummary(); }
 
 function toast(m){const t=document.getElementById('toast');t.innerHTML=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3600);}
 
