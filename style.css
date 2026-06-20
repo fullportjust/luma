@@ -293,3 +293,7 @@ a.ci-val:hover{color:var(--gold-bright)}
 .copy-modal-overlay.open{opacity:1;pointer-events:all}
 .copy-modal{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:2rem;max-width:380px;width:90%;position:relative;transform:scale(.9);transition:.3s}
 .copy-modal-overlay.open .copy-modal{transform:scale(1)}
+.cm-close{position:absolute;top:14px;right:14px;background:none;border:1px solid var(--line);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;transition:.2s}
+.cm-close:hover{border-color:var(--gold);color:var(--gold-bright)}
+.cm-line-btn{border-color:rgba(6,199,85,.4)!important}
+.cm-line-btn:hover{border-color:#06c755!important;background:rgba(6,199,85,.08)!important}
