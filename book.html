@@ -74,10 +74,8 @@
 
       <div class="field">
         <label data-i18n="book.q2">2 · When?</label>
-        <div class="two-col">
-          <input type="date" id="date">
-          <select id="time"><option value="">Select a time…</option></select>
-        </div>
+        <input type="date" id="date" style="width:100%;margin-bottom:.7rem">
+        <select id="time" style="width:100%"><option value="">Select a time…</option></select>
       </div>
 
       <div class="field">
@@ -135,9 +133,10 @@ document.getElementById('book-gallery').innerHTML = `
   <div class="tile"><img src="${LN_IMG.massage}" alt="VIP suite"></div>`;
 
 const timeSel=document.getElementById('time');
-const slots=[]; for(let h=18;h<=23;h++){slots.push(h+':00');slots.push(h+':30');}
-['0:00','0:30','1:00','1:30'].forEach(t=>slots.push(t));
-slots.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t.padStart(5,'0')+(parseInt(t)<6?' (after midnight)':'');timeSel.appendChild(o);});
+const slots=[];
+for(let h=11;h<=23;h++){slots.push({v:h+':00',l:(h<12?h+':00 AM':h===12?'12:00 PM':(h-12)+':00 PM')});slots.push({v:h+':30',l:(h<12?h+':30 AM':h===12?'12:30 PM':(h-12)+':30 PM')});}
+['00:00','00:30','01:00','01:30','02:00','02:30'].forEach(t=>{const hr=parseInt(t);slots.push({v:t,l:(hr===0?'12':hr)+t.slice(2)+' AM (next day)'});});
+slots.forEach(s=>{const o=document.createElement('option');o.value=s.v;o.textContent=s.l;timeSel.appendChild(o);});
 const d=document.getElementById('date');const today=new Date();d.min=today.toISOString().split('T')[0];d.value=today.toISOString().split('T')[0];
 
 document.querySelectorAll('#service-chips .chip').forEach(c=>{
