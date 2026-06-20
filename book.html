@@ -196,13 +196,40 @@ function sendVia(platform){
   const encoded = encodeURIComponent(msg);
 
   if(platform==='line'){
-    navigator.clipboard.writeText(msg).then(()=>{
-      toast('✅ Message copied! Paste it in LINE.');
-    }).catch(()=>{});
-    location.href = 'https://line.me/R/ti/p/@370nwatk';
+    showCopyModal(msg);
   } else if(platform==='whatsapp'){
     location.href = `https://wa.me/660828943665?text=${encoded}`;
   }
+}
+function showCopyModal(msg){
+  let modal = document.getElementById('copy-modal');
+  if(!modal){
+    modal = document.createElement('div');
+    modal.id = 'copy-modal';
+    modal.innerHTML = `<div class="copy-modal-overlay" onclick="if(event.target===this)closeCopyModal()">
+      <div class="copy-modal">
+        <button class="close-modal" onclick="closeCopyModal()">✕</button>
+        <h3 style="font-family:var(--serif);color:var(--gold-bright);font-size:1.3rem;margin-bottom:.5rem">Copy your message</h3>
+        <p style="color:var(--muted);font-size:.88rem;margin-bottom:1rem">Tap the button below to copy, then paste it in LINE.</p>
+        <div id="copy-modal-text" style="background:rgba(15,8,38,.6);border:1px solid var(--line);border-radius:10px;padding:.8rem;font-size:.88rem;color:var(--ink);max-height:200px;overflow-y:auto;white-space:pre-wrap;margin-bottom:1rem"></div>
+        <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="copyModalMsg()">📋 Copy message</button>
+        <a href="https://line.me/R/ti/p/@370nwatk" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.5rem">Open LINE</a>
+      </div>
+    </div>`;
+    document.body.appendChild(modal);
+  }
+  document.getElementById('copy-modal-text').textContent = msg;
+  modal.querySelector('.copy-modal-overlay').classList.add('open');
+  window._copyModalMsg = msg;
+}
+function closeCopyModal(){
+  document.getElementById('copy-modal').querySelector('.copy-modal-overlay').classList.remove('open');
+}
+function copyModalMsg(){
+  navigator.clipboard.writeText(window._copyModalMsg).then(()=>{
+    document.querySelector('#copy-modal .btn-gold').textContent = '✅ Copied!';
+    setTimeout(()=>{ document.querySelector('#copy-modal .btn-gold').textContent = '📋 Copy message'; }, 2000);
+  }).catch(()=>{});
 }
 </script>
 </body>
