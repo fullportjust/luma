@@ -47,7 +47,6 @@ function buildFooter(){
           <a href="${PHONE_TEL}" style="color:var(--muted);font-size:.88rem;text-decoration:none">📞 ${PHONE}</a>
           <a href="${LINE_DEEP}" style="color:var(--muted);font-size:.88rem;text-decoration:none">💚 LINE: @370nwatk</a>
           <a href="${WA_URL}" style="color:var(--muted);font-size:.88rem;text-decoration:none">💬 WhatsApp: ${PHONE}</a>
-          <a href="javascript:void(0)" onclick="openQRModal('${LN_IMG.wechat_qr}','WeChat',t('qr.scan.modal.sub'),'JazzyBKK','wechat')" style="color:var(--muted);font-size:.88rem;text-decoration:none">💚 WeChat: JazzyBKK</a>
         </div>
       </div>
       <div>
