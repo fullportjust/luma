@@ -24,6 +24,8 @@ nav.links a{color:var(--ink);text-decoration:none;font-size:.8rem;letter-spacing
 nav.links a:hover,nav.links a.active{color:var(--gold-bright)}
 nav.links a.book-btn{background:var(--gold);color:#1b0f3a;font-weight:500}
 nav.links a.book-btn:hover{background:var(--gold-bright)}
+.nav-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;transition:.2s;opacity:.8}
+.nav-icon:hover{opacity:1;background:rgba(232,195,100,.1)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:40px;height:36px;cursor:pointer;color:var(--gold);font-size:1.1rem}
 .nav-right{display:flex;align-items:center;gap:.6rem}
 @media(max-width:740px){
