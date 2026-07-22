@@ -29,10 +29,10 @@ const I18N = {
 
   // ---- home ----
   "home.eyebrow": { en:"Karaoke · Massage · Nightlife", th:"คาราโอเกะ · นวด · ไนต์ไลฟ์", zh:"卡拉OK · 按摩 · 夜生活", ja:"カラオケ · マッサージ · ナイトライフ", ko:"노래방 · 마사지 · 나이트라이프" },
-  "home.hero":    { en:"Private KTV rooms, free-flow drinks, and a full spa menu — an intimate, neon-lit lounge in the heart of Bangkok.",
-                    th:"ห้องคาราโอเกะส่วนตัว เครื่องดื่มไม่อั้น และเมนูสปาครบครัน — เลานจ์สุดอบอุ่นใจกลางกรุงเทพฯ",
-                    zh:"私人KTV包间、无限畅饮和全套水疗菜单 — 位于曼谷市中心的霓虹温馨会所。",
-                    ja:"プライベートKTVルーム、フリードリンク、フルスパメニュー — バンコク中心部のネオン輝く隠れ家ラウンジ。", ko:"프라이빗 KTV 룸, 무제한 음료, 풀 스파 메뉴 — 방콕 중심부의 아늑한 네온 라운지." },
+  "home.hero":    { en:"Private KTV rooms, free-flow drinks, and a full spa menu.",
+                    th:"ห้องคาราโอเกะส่วนตัว เครื่องดื่มไม่อั้น และเมนูสปาครบครัน",
+                    zh:"私人KTV包间、无限畅饮和全套水疗菜单。",
+                    ja:"プライベートKTVルーム、フリードリンク、フルスパメニュー。", ko:"프라이빗 KTV 룸, 무제한 음료, 풀 스파 메뉴." },
   "home.book":    { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
   "home.viewmenu":{ en:"View Menu", th:"ดูเมนู", zh:"查看菜单", ja:"メニューを見る", ko:"메뉴 보기" },
   "home.offer":   { en:"What we offer", th:"บริการของเรา", zh:"我们提供", ja:"サービス", ko:"서비스 안내" },
