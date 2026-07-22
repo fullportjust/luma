@@ -48,6 +48,11 @@ const I18N = {
   "home.combo.d": { en:"1 hr karaoke + 1 hr Nuru massage —", th:"คาราโอเกะ 1 ชม. + นวดนูรุ 1 ชม. —", zh:"1小时卡拉OK + 1小时Nuru按摩 —", ja:"カラオケ1時間 + ヌルマッサージ1時間 —", ko:"노래방 1시간 + 누루 마사지 1시간 —" },
   "home.bestvalue":{ en:"Best Value", th:"คุ้มที่สุด", zh:"超值", ja:"お得", ko:"최고의 가치" },
   "home.reservecombo":{ en:"Reserve the combo", th:"จองเซ็ตนี้", zh:"预订套餐", ja:"セットを予約", ko:"세트 예약" },
+  "home.firsttime":  { en:"🎉 First-time customers get ฿800 OFF your first visit!",
+                        th:"🎉 ลูกค้าใหม่รับส่วนลด ฿800 สำหรับการมาครั้งแรก!",
+                        zh:"🎉 首次到店顾客立减 ฿800！",
+                        ja:"🎉 初回のお客様は初回来店時に฿800オフ！",
+                        ko:"🎉 첫 방문 고객님, 첫 방문 시 ฿800 할인!" },
 
   // ---- menu ----
   "menu.eyebrow": { en:"All prices in ฿ · service charge & VAT included", th:"ราคาทั้งหมดเป็นบาท · รวมเซอร์วิสชาร์จและภาษีแล้ว", zh:"所有价格以฿计 · 已含服务费和增值税", ja:"全価格฿表示 · サービス料・税込", ko:"모든 가격 ฿ 기준 · 봉사료 및 VAT 포함" },
