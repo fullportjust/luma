@@ -149,12 +149,13 @@
     <p class="eyebrow" data-i18n="home.findus.eyebrow">Find Us</p>
     <h2 class="gold" style="margin:.3rem 0 1.4rem" data-i18n="home.findus.title">Visit Lumi Nuru</h2>
     <div class="find-grid">
-      <div class="map-embed">
+      <div class="map-embed" style="position:relative;cursor:pointer;" onclick="window.open('https://maps.app.goo.gl/7yn2K88UeRiCiQ3V7','_blank')">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.72!2d100.5707!3d13.7307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29fc3972f9341%3A0x866c919dcab30736!2sLumi%20Nuru%20Massage%20%26%20KTV%20Bangkok!5e0!3m2!1sen!2sth"
-          width="100%" height="100%" style="border:0;border-radius:16px;" allowfullscreen
+          width="100%" height="100%" style="border:0;border-radius:16px;pointer-events:none;" allowfullscreen
           loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lumi Nuru location">
         </iframe>
+        <div style="position:absolute;inset:0;z-index:1;" aria-hidden="true"></div>
       </div>
       <div class="contact-info">
         <div class="ci-row">
