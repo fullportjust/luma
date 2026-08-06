@@ -10,7 +10,7 @@ const LN_LOGO = (cls="") => `
     <path d="M112 92 h20 l24 46 V92 h20 v94 h-20 l-24 -46 v46 h-20 Z"/></g>
 </svg>`;
 
-const PHONE="+66 082 894 3665", PHONE_TEL="tel:+660828943665", LINE_ID="@370nwatk", LINE_DEEP="https://line.me/R/home/public/profile?id=370nwatk#~", WA_URL="https://wa.me/660828943665", WA_QR="https://wa.me/qr/TH2MCJADMW2XI1", ADDR="Bangkok, Thailand", MAPS_URL="https://maps.app.goo.gl/rcKXQsdLzDWAYKzQA";
+const PHONE="+66 082 894 3665", PHONE_TEL="tel:+660828943665", LINE_ID="@370nwatk", LINE_DEEP="https://line.me/R/home/public/profile?id=370nwatk#~", WA_URL="https://wa.me/660828943665", WA_QR="https://wa.me/qr/TH2MCJADMW2XI1", ADDR="Bangkok, Thailand", MAPS_URL="https://maps.app.goo.gl/7yn2K88UeRiCiQ3V7";
 
 function buildNav(active){
   const link=(h,l,e="",key="")=>`<a href="${h}" class="${active===h?'active':''} ${e}"${key?` data-i18n="${key}"`:''}>${l}</a>`;
@@ -39,7 +39,7 @@ function buildFooter(){
       <div>
         <h4 data-i18n="foot.visit">Visit</h4>
         <a href="${MAPS_URL}" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:.4rem;margin-bottom:.5rem;color:var(--muted);font-size:.88rem;text-decoration:none">
-          <span>📍</span><span>1/34 Sukhumvit 26<br>Khlong Tan Nuea, Watthana<br>Bangkok 10110</span>
+          <span>📍</span><span>1/34 Sukhumvit 39<br>Khlong Tan Nuea, Watthana<br>Bangkok 10110</span>
         </a>
         <p style="color:var(--muted);font-size:.84rem;margin-bottom:.3rem">🚇 BTS Phrom Phong · 5 min walk</p>
         <a href="${MAPS_URL}" target="_blank" rel="noopener" style="font-size:.82rem;color:var(--gold-bright);text-decoration:none" data-i18n="foot.directions">Get directions →</a>
