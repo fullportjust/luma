@@ -128,7 +128,6 @@ const I18N = {
   // ---- contact buttons ----
   "btn.open.line": { en:"Open in LINE", th:"เปิดใน LINE", zh:"在LINE中打开", ja:"LINEで開く", ko:"LINE에서 열기" },
   "btn.open.whatsapp": { en:"Open in WhatsApp", th:"เปิดใน WhatsApp", zh:"在WhatsApp中打开", ja:"WhatsAppで開く", ko:"WhatsApp에서 열기" },
-  "btn.open.wechat": { en:"Open in WeChat", th:"เปิดใน WeChat", zh:"在微信中打开", ja:"WeChatで開く", ko:"WeChat에서 열기" },
   "btn.message.line": { en:"Message on LINE", th:"แชทใน LINE", zh:"在LINE上联系", ja:"LINEで連絡", ko:"LINE으로 메시지" },
   "btn.call.now": { en:"Call Now", th:"โทรเลย", zh:"立即致电", ja:"今すぐ電話", ko:"지금 전화" },
   "btn.call": { en:"Call", th:"โทร", zh:"电话", ja:"電話", ko:"전화" },
