@@ -63,7 +63,7 @@
 }
 </script>
 </head>
-<body>
+<body class="home">
 <div id="nav-mount"></div>
 
 <section class="hero">
@@ -130,16 +130,31 @@
   </div>
 </section>
 
-<!-- Combo strip -->
+<!-- Offers -->
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="card" style="text-align:center;padding:2.4rem 1.4rem">
-      <span class="tag" data-i18n="home.bestvalue">Best Value</span>
-      <h2 class="gold" style="margin:.8rem 0 .3rem" data-i18n="home.combo">KTV + Nuru Combo</h2>
-      <p class="lead" style="margin:0 auto 1.2rem"><span data-i18n="home.combo.d">1 hr KTV + 1 hr massage —</span>
-        <span style="color:var(--muted);text-decoration:line-through">฿4,800</span>
-        <b style="color:var(--gold-bright);font-size:1.25rem"> ฿3,900</b></p>
-      <a href="book.html" class="btn btn-gold" data-i18n="home.reservecombo">Reserve the combo</a>
+    <p class="eyebrow" data-i18n="home.offers.eyebrow">Promotions</p>
+    <h2 class="gold" style="margin:.3rem 0 1.2rem" data-i18n="home.offers.title">Offers</h2>
+    <div class="grid cols-3 offers-grid">
+      <div class="card offer-card">
+        <span class="tag" data-i18n="home.bestvalue">Best Value</span>
+        <h3 data-i18n="home.combo">KTV + Massage Combo</h3>
+        <p class="offer-desc" data-i18n="home.combo.d">1 hr KTV + 1 hr massage</p>
+        <p class="offer-price"><s>฿4,800</s> <b>฿3,900</b></p>
+        <a href="book.html" class="btn btn-gold" data-i18n="home.reservecombo">Reserve the combo</a>
+      </div>
+      <div class="card offer-card">
+        <h3 data-i18n="home.drinks">Drink Buffet</h3>
+        <p class="offer-desc" data-i18n="home.drinkoffer.d">1 hr — free refill, mixer included</p>
+        <p class="offer-price">฿880 <small data-i18n="home.perperson">/ person</small></p>
+        <a href="menu.html" class="btn btn-ghost" data-i18n="home.seemenu">See the menu</a>
+      </div>
+      <div class="card offer-card">
+        <h3 data-i18n="home.ktvlady">1 hr KTV + lady</h3>
+        <p class="offer-desc" data-i18n="home.ktvlady.d">incl. drink buffet</p>
+        <p class="offer-price">฿1,500</p>
+        <a href="menu.html" class="btn btn-ghost" data-i18n="home.seemenu">See the menu</a>
+      </div>
     </div>
   </div>
 </section>
