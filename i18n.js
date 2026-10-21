@@ -70,7 +70,7 @@ const I18N = {
   "menu.massage": { en:"Massage & Spa", th:"นวด & สปา", zh:"按摩与水疗", ja:"マッサージ＆スパ", ko:"마사지 & 스파" },
   "menu.special": { en:"Special Course", th:"คอร์สพิเศษ", zh:"特别课程", ja:"スペシャルコース", ko:"스페셜 코스" },
   "menu.special.sub":{ en:"· VIP room", th:"· ห้อง VIP", zh:"· VIP房", ja:"· VIPルーム", ko:"· VIP 룸" },
-  "menu.longtime":{ en:"Long Time / Take Out", th:"ลองไทม์ / เทคเอาท์", zh:"长时间 / 外出", ja:"ロングタイム / テイクアウト", ko:"롱타임 / 테이크아웃" },
+  "menu.longtime":{ en:"Outcall Massage", th:"นวดนอกสถานที่", zh:"外派按摩", ja:"出張マッサージ", ko:"출장 마사지" },
   "menu.promos":  { en:"Promotions", th:"โปรโมชั่น", zh:"优惠", ja:"プロモーション", ko:"프로모션" },
   "menu.bookbtn": { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
 
