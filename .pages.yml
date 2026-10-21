@@ -1,0 +1,53 @@
+# Pages CMS configuration — https://pagescms.org
+# Edit the site's therapist lineup from a web UI (no Git knowledge needed).
+# Sign in at https://app.pagescms.org with GitHub, pick this repository,
+# and the "Our Therapists" entry below appears in the sidebar.
+#
+# CONTENT RULE: therapist photos and copy are plain and professional only.
+# Clothed, neutral background, no sexualised imagery, and NO body-measurement
+# or vitals fields (no chest / waist / hips). Do not add such fields.
+
+media:
+  - name: therapist_photos
+    label: Therapist photos
+    input: img/therapists
+    output: /img/therapists
+    categories: [image]
+    rename: safe
+    commit:
+      templates:
+        create: "Therapists: add photo {filename}"
+        update: "Therapists: update photo {filename}"
+        delete: "Therapists: remove photo {filename}"
+        rename: "Therapists: rename {oldFilename} -> {newFilename}"
+
+content:
+  - name: therapists
+    label: Our Therapists
+    type: file
+    path: data/therapists.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+        description: Public display name only (no personal details or measurements).
+      - name: role
+        label: Role
+        type: string
+        required: true
+        options:
+          maxlength: 40
+        description: Plain, professional job title, e.g. "Therapist" or "Senior Therapist".
+      - name: photo
+        label: Photo
+        type: image
+        description: >-
+          Plain, professional headshot or upper-body photo only — clothed, neutral
+          background, no sexualised imagery. Leave empty to show a monogram placeholder.
+        options:
+          media: therapist_photos
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe

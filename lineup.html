@@ -69,38 +69,43 @@
 <script src="shared.js"></script>
 <script>
 /* ------------------------------------------------------------------
-   EDIT THIS LIST to add your therapists.
-   Each entry: name, role, photo (path under img/), and an optional note.
+   The therapist list lives in data/therapists.json so it can be edited
+   from the web CMS (see .pages.yml / README) — no code changes needed.
+   Each entry: { name, role, photo }.
    Photos should be plain, professional and non-sexual — a normal
    headshot / upper-body shot, clothed, on a neutral background.
    Leave photo "" to show a monogram placeholder until you add one.
 ------------------------------------------------------------------- */
-const THERAPISTS = [
-  { name: "Add name", role: "Therapist", photo: "" },
-  { name: "Add name", role: "Therapist", photo: "" },
-  { name: "Add name", role: "Therapist", photo: "" },
-  { name: "Add name", role: "Therapist", photo: "" },
-  { name: "Add name", role: "Therapist", photo: "" },
-  { name: "Add name", role: "Therapist", photo: "" }
-];
-
 (function(){
   const grid = document.getElementById('team-grid');
   if(!grid) return;
-  grid.innerHTML = THERAPISTS.map(p=>{
-    const photo = p.photo
-      ? `<img loading="lazy" src="${p.photo}" alt="${p.name}">`
-      : `<div style="height:190px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:3rem;color:var(--gold);background:linear-gradient(135deg,#241848,#3a2560)">${(p.name||'?').trim().charAt(0).toUpperCase()}</div>`;
-    return `<div class="card">
-      ${photo}
-      <div class="body">
-        <h3>${p.name}</h3>
-        <p>${p.role}</p>
-        <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-ghost" style="margin-top:.9rem;font-size:.7rem;padding:.6rem 1rem" data-i18n="team.avail">Message for availability</a>
-      </div>
-    </div>`;
-  }).join('');
-  if(typeof applyI18n === 'function') applyI18n();
+
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+
+  function render(list){
+    grid.innerHTML = (list || []).map(p=>{
+      const name = esc(p.name), role = esc(p.role);
+      const photo = p.photo
+        ? `<img loading="lazy" src="${esc(p.photo)}" alt="${name}">`
+        : `<div style="height:190px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:3rem;color:var(--gold);background:linear-gradient(135deg,#241848,#3a2560)">${esc((p.name||'?').trim().charAt(0).toUpperCase())}</div>`;
+      return `<div class="card">
+        ${photo}
+        <div class="body">
+          <h3>${name}</h3>
+          <p>${role}</p>
+          <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-ghost" style="margin-top:.9rem;font-size:.7rem;padding:.6rem 1rem" data-i18n="team.avail">Message for availability</a>
+        </div>
+      </div>`;
+    }).join('');
+    if(typeof applyI18n === 'function') applyI18n();
+  }
+
+  fetch('data/therapists.json', { cache: 'no-cache' })
+    .then(r => r.ok ? r.json() : [])
+    .then(data => render(Array.isArray(data) ? data : (data && data.therapists) || []))
+    .catch(() => render([]));
 })();
 
 mountChrome('lineup.html');
