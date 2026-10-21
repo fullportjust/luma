@@ -367,6 +367,8 @@ a.ci-val:hover{color:var(--gold-bright)}
 /* Home page — tighter vertical rhythm */
 .home section:not(.hero){padding:2.6rem 0}
 .home section:not(.hero):first-of-type{padding-top:0}
+/* keep the sticky header from covering anchor targets (e.g. nav "Ladies" -> #ladies) */
+section[id]{scroll-margin-top:76px}
 @media(max-width:768px){
   .home section:not(.hero){padding:2rem 0}
   .home .promo-video-section{padding:1.6rem 0 2rem}
@@ -374,6 +376,9 @@ a.ci-val:hover{color:var(--gold-bright)}
 }
 
 /* Home Ladies slideshow */
+/* .wrap has overflow:hidden; let the first child card keep its full 1px top border
+   and rounded corners (and its hover lift) so they are never clipped */
+.ladies-home .wrap{overflow:visible}
 .ladies-home .lineup-slideshow{max-width:640px}
 .ladies-home .ls-track{height:clamp(260px,46vw,480px)}
 .ladies-home .ls-empty{border-style:dashed;background:rgba(255,255,255,.03);box-shadow:none}
