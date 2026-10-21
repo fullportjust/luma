@@ -167,8 +167,8 @@ let service='KTV';
 
 mountChrome('book.html');
 document.getElementById('book-gallery').innerHTML = `
-  <div class="tile"><img src="${LN_IMG.ktv}" alt="KTV room"></div>
-  <div class="tile"><img src="${LN_IMG.massage}" alt="VIP suite"></div>`;
+  <div class="tile"><img loading="lazy" src="${LN_IMG.ktv}" alt="KTV room"></div>
+  <div class="tile"><img loading="lazy" src="${LN_IMG.massage}" alt="VIP suite"></div>`;
 
 const timeSel=document.getElementById('time');
 const slots=[];
