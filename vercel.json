@@ -5,6 +5,7 @@
   "outputDirectory": ".",
   "redirects": [
     { "source": "/lineup", "destination": "/#ladies", "permanent": true },
-    { "source": "/lineup/", "destination": "/#ladies", "permanent": true }
+    { "source": "/lineup/", "destination": "/#ladies", "permanent": true },
+    { "source": "/lineup.html", "destination": "/#ladies", "permanent": true }
   ]
 }
