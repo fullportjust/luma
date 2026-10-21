@@ -6,22 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lumimassagektv.com/menu.html</loc>
+    <loc>https://lumimassagektv.com/menu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lumimassagektv.com/book.html</loc>
+    <loc>https://lumimassagektv.com/book</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lumimassagektv.com/faq.html</loc>
+    <loc>https://lumimassagektv.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lumimassagektv.com/lineup.html</loc>
+    <loc>https://lumimassagektv.com/lineup</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
