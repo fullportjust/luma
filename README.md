@@ -26,7 +26,7 @@ Push these files to a repo, then "Import Project" in Vercel and select the repo.
 ## Files
 - index.html — home
 - menu.html — menu & pricing
-- lineup.html — photo slideshow generated from `img/therapists/`
+- index.html — home, including the Ladies section (`#ladies`) with the therapist slideshow
 - book.html — reservation form
 - style.css / shared.js / assets.js — shared styling, layout, and embedded photos
 - vercel.json — clean URLs (/menu instead of /menu.html) + build command
@@ -35,7 +35,9 @@ Push these files to a repo, then "Import Project" in Vercel and select the repo.
 
 ## Adding photos to the lineup
 
-`lineup.html` is a photo-only slideshow of every image in `img/therapists/`.
+The home page Ladies section (`index.html#ladies`) is the only ladies showcase:
+a photo-only slideshow of every image in `img/therapists/` plus a
+message-for-availability CTA. The old `/lineup` URL 301-redirects to `/#ladies`.
 No names, roles or captions are shown anywhere.
 
 1. Drop photos into `img/therapists/`. Any filename works — it is never

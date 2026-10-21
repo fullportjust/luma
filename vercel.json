@@ -2,5 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "buildCommand": "npm run build",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/lineup", "destination": "/#ladies", "permanent": true },
+    { "source": "/lineup/", "destination": "/#ladies", "permanent": true }
+  ]
 }
