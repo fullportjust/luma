@@ -88,6 +88,22 @@
   </div>
 </section>
 
+<!-- Ladies -->
+<section class="ladies-home" style="padding-top:0">
+  <div class="wrap">
+    <div class="card" style="padding:1.8rem 1.4rem 1.6rem;text-align:center">
+      <p class="eyebrow" data-i18n="home.ladies.eyebrow">Meet the ladies</p>
+      <h2 class="gold" style="margin:.3rem 0 .5rem" data-i18n="home.ladies.title">Ladies</h2>
+      <p class="lead" style="margin:0 auto 1.4rem" data-i18n="home.ladies.intro">A handpicked team of therapists and hostesses — message us for today's availability.</p>
+      <div class="lineup-slideshow" id="home-team-gallery" aria-roledescription="carousel" aria-label="Therapist photos" tabindex="0"></div>
+      <div class="ladies-cta" style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:1.4rem">
+        <a href="lineup.html" class="btn btn-gold" data-i18n="home.ladies.lineup">View lineup</a>
+        <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-ghost" data-i18n="home.ladies.cta">Message for availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Promo Video -->
 <section class="promo-video-section">
   <div class="wrap" style="text-align:center">
@@ -154,23 +170,6 @@
         <p class="offer-desc" data-i18n="home.ktvlady.d">incl. drink buffet</p>
         <p class="offer-price">฿1,500</p>
         <a href="menu.html" class="btn btn-ghost" data-i18n="home.seemenu">See the menu</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Ladies -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="card" style="padding:2.4rem 1.6rem;display:flex;gap:1.6rem;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <div style="flex:1 1 320px">
-        <p class="eyebrow" data-i18n="home.ladies.eyebrow">Meet the ladies</p>
-        <h2 class="gold" style="margin:.3rem 0 .5rem" data-i18n="home.ladies.title">Ladies</h2>
-        <p class="lead" style="margin:0" data-i18n="home.ladies.intro">A handpicked team of therapists and hostesses — message us for today's availability.</p>
-      </div>
-      <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
-        <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-gold" data-i18n="home.ladies.cta">Message for availability</a>
-        <a href="lineup.html" class="btn btn-ghost" data-i18n="home.ladies.lineup">View lineup</a>
       </div>
     </div>
   </div>
@@ -247,6 +246,9 @@ document.getElementById('services').innerHTML = `
 
 // re-apply translations to the freshly-injected cards
 applyI18n();
+
+// home ladies slideshow (same photos as lineup.html)
+initTherapistSlideshow('home-team-gallery');
 
 // QR contact strip
 document.getElementById('qr-strip-mount').innerHTML = `

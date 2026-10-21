@@ -372,3 +372,14 @@ a.ci-val:hover{color:var(--gold-bright)}
   .home .promo-video-section{padding:1.6rem 0 2rem}
   .home footer{margin-top:0}
 }
+
+/* Home Ladies slideshow */
+.ladies-home .lineup-slideshow{max-width:640px}
+.ladies-home .ls-track{height:clamp(260px,46vw,480px)}
+.ladies-home .ls-empty{border-style:dashed;background:rgba(255,255,255,.03);box-shadow:none}
+.ladies-home .ls-empty:hover{transform:none;border-color:var(--line)}
+.ladies-home .lead{max-width:56ch}
+@media(max-width:540px){
+  .ladies-home .ladies-cta{flex-direction:column;align-items:stretch!important}
+  .ladies-home .ladies-cta .btn{justify-content:center}
+}
