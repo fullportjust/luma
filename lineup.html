@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Today's Lineup — Lumi Nuru</title>
-<meta name="description" content="Today's available therapists at Lumi Nuru. Check who's on shift and book your favorite.">
+<title>Our Therapists — Lumi Nuru</title>
+<meta name="description" content="Meet the therapists at Lumi Nuru. Message us for today's availability and we'll match you with the right therapist for your visit.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta property="og:title" content="Today's Lineup — Lumi Nuru">
-<meta property="og:description" content="Today's available therapists at Lumi Nuru. Check who's on shift and book your favorite.">
+<meta property="og:title" content="Our Therapists — Lumi Nuru">
+<meta property="og:description" content="Meet the therapists at Lumi Nuru. Message us for today's availability.">
 <meta property="og:image" content="https://lumimassagektv.com/og-image.jpg">
 <meta property="og:url" content="https://lumimassagektv.com/lineup">
 <meta property="og:type" content="website">
@@ -26,18 +26,8 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lumimassagektv.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Lineup",
-      "item": "https://lumimassagektv.com/lineup"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumimassagektv.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Our Therapists", "item": "https://lumimassagektv.com/lineup" }
   ]
 }
 </script>
@@ -45,15 +35,30 @@
 <body>
 <div id="nav-mount"></div>
 
-<section style="padding:5rem 0 3rem;text-align:center">
-  <div class="wrap" style="max-width:600px;margin:0 auto">
-    <div style="font-size:3.5rem;margin-bottom:1.2rem">👩‍🦰</div>
-    <p class="eyebrow">Coming Soon</p>
-    <h1 class="gold" style="font-size:clamp(2rem,5vw,3rem);margin-bottom:.8rem">Daily Lineup</h1>
-    <p class="lead" style="color:var(--muted);margin:0 auto 2rem">Our daily therapist lineup is being finalized. In the meantime, you can still book your preferred room and time — just mention who you'd like in the special requests.</p>
-    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
-      <a href="book.html" class="btn btn-gold" data-i18n="home.book">Book a Room</a>
-      <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-ghost" data-i18n="btn.message.line">Message on LINE</a>
+<section style="padding:4.5rem 0 2.2rem;text-align:center">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="team.eyebrow">Lumi Nuru</p>
+    <h1 class="gold" style="font-size:clamp(2rem,5vw,3rem);margin:.4rem 0 .8rem" data-i18n="team.title">Our Therapists</h1>
+    <p class="lead" style="margin:0 auto 1.8rem" data-i18n="team.sub">Meet the team behind Lumi Nuru.</p>
+    <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-gold" data-i18n="team.avail">Message for availability</a>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="grid cols-3" id="team-grid"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="card" style="max-width:640px;margin:0 auto;text-align:center;padding:2.2rem 1.4rem">
+      <h2 class="gold" style="font-size:1.6rem;margin:.2rem 0 .6rem" data-i18n="team.avail.title">Want a specific therapist?</h2>
+      <p class="lead" style="margin:0 auto 1.4rem" data-i18n="team.avail.d">Message us for today's availability — we'll confirm who's on shift and lock in your time.</p>
+      <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-gold" data-i18n="btn.message.line">Message on LINE</a>
+        <a href="https://wa.me/660828943665" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="btn.open.whatsapp">Open in WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -62,6 +67,43 @@
 <script src="assets.js"></script>
 <script src="i18n.js"></script>
 <script src="shared.js"></script>
-<script>mountChrome('lineup.html');</script>
+<script>
+/* ------------------------------------------------------------------
+   EDIT THIS LIST to add your therapists.
+   Each entry: name, role, photo (path under img/), and an optional note.
+   Photos should be plain, professional and non-sexual — a normal
+   headshot / upper-body shot, clothed, on a neutral background.
+   Leave photo "" to show a monogram placeholder until you add one.
+------------------------------------------------------------------- */
+const THERAPISTS = [
+  { name: "Add name", role: "Therapist", photo: "" },
+  { name: "Add name", role: "Therapist", photo: "" },
+  { name: "Add name", role: "Therapist", photo: "" },
+  { name: "Add name", role: "Therapist", photo: "" },
+  { name: "Add name", role: "Therapist", photo: "" },
+  { name: "Add name", role: "Therapist", photo: "" }
+];
+
+(function(){
+  const grid = document.getElementById('team-grid');
+  if(!grid) return;
+  grid.innerHTML = THERAPISTS.map(p=>{
+    const photo = p.photo
+      ? `<img loading="lazy" src="${p.photo}" alt="${p.name}">`
+      : `<div style="height:190px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:3rem;color:var(--gold);background:linear-gradient(135deg,#241848,#3a2560)">${(p.name||'?').trim().charAt(0).toUpperCase()}</div>`;
+    return `<div class="card">
+      ${photo}
+      <div class="body">
+        <h3>${p.name}</h3>
+        <p>${p.role}</p>
+        <a href="https://line.me/R/home/public/profile?id=370nwatk#~" class="btn btn-ghost" style="margin-top:.9rem;font-size:.7rem;padding:.6rem 1rem" data-i18n="team.avail">Message for availability</a>
+      </div>
+    </div>`;
+  }).join('');
+  if(typeof applyI18n === 'function') applyI18n();
+})();
+
+mountChrome('lineup.html');
+</script>
 </body>
 </html>

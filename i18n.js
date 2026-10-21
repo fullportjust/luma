@@ -78,8 +78,11 @@ const I18N = {
 
   // ---- team ----
   "team.eyebrow": { en:"Lumi Nuru", th:"Lumi Nuru", zh:"Lumi Nuru", ja:"Lumi Nuru", ko:"Lumi Nuru" },
-  "team.title":   { en:"Our Team", th:"ทีมงานของเรา", zh:"我们的团队", ja:"スタッフ紹介", ko:"우리 팀" },
-  "team.sub":     { en:"Meet the team behind Lumi Nuru.", th:"พบกับทีมงานของ Lumi Nuru", zh:"认识 Lumi Nuru 的团队。", ja:"Lumi Nuru のスタッフをご紹介します。", ko:"Lumi Nuru의 팀을 소개합니다." },
+  "team.title":   { en:"Our Therapists", th:"นักบำบัดของเรา", zh:"我们的理疗师", ja:"セラピスト紹介", ko:"테라피스트" },
+  "team.sub":     { en:"Meet the therapists behind Lumi Nuru.", th:"พบกับนักบำบัดของ Lumi Nuru", zh:"认识 Lumi Nuru 的理疗师团队。", ja:"Lumi Nuru のセラピストをご紹介します。", ko:"Lumi Nuru의 테라피스트를 소개합니다." },
+  "team.avail":   { en:"Message for availability", th:"สอบถามคิวว่าง", zh:"咨询档期", ja:"空き状況を問い合わせ", ko:"예약 가능 여부 문의" },
+  "team.avail.title":{ en:"Want a specific therapist?", th:"ต้องการนักบำบัดท่านใดเป็นพิเศษ?", zh:"想指定理疗师？", ja:"特定のセラピストをご希望ですか？", ko:"특정 테라피스트를 원하시나요?" },
+  "team.avail.d": { en:"Message us for today's availability — we'll confirm who's on shift and lock in your time.", th:"ทักมาสอบถามคิววันนี้ — เราจะยืนยันว่าใครเข้างานและล็อกเวลาของคุณ", zh:"消息我们查询今日档期 — 我们会确认出勤并锁定您的时间。", ja:"本日の空き状況をお問い合わせください — 出勤を確認しお時間を確保します。", ko:"오늘 예약 가능 여부를 문의하세요 — 근무자를 확인하고 시간을 확정해 드립니다." },
 
   // ---- book ----
   "book.eyebrow": { en:"Reservations", th:"การจอง", zh:"预订", ja:"ご予約", ko:"예약" },
