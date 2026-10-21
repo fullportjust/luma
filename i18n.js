@@ -10,7 +10,7 @@ const I18N = {
   // ---- nav ----
   "nav.home":   { en:"Home",  th:"หน้าแรก", zh:"首页", ja:"ホーム", ko:"홈" },
   "nav.menu":   { en:"Menu",  th:"เมนู",    zh:"菜单", ja:"メニュー", ko:"메뉴" },
-  "nav.team":   { en:"Team",  th:"ทีมงาน",  zh:"团队", ja:"スタッフ", ko:"팀" },
+  "nav.team":   { en:"Ladies", th:"สาวๆ",  zh:"美女", ja:"レディース", ko:"여성" },
   "nav.book":   { en:"Book",  th:"จอง",      zh:"预订", ja:"予約", ko:"예약" },
   "nav.language": { en:"Language", th:"ภาษา", zh:"语言", ja:"言語", ko:"언어" },
 

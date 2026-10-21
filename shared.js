@@ -24,7 +24,7 @@ function buildNav(active){
       <button class="burger" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     </div>
     <nav class="links" id="navlinks">
-      ${link('index.html','Home','','nav.home')}${link('menu.html','Menu','','nav.menu')}${link('lineup.html','Team','','nav.team')}${link('faq.html','FAQ','','nav.faq')}
+      ${link('index.html','Home','','nav.home')}${link('menu.html','Menu','','nav.menu')}${link('lineup.html','Ladies','','nav.team')}${link('faq.html','FAQ','','nav.faq')}
     </nav></div></header>`;
 }
 function buildFooter(){
