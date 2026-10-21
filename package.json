@@ -1,0 +1,12 @@
+{
+  "name": "lumi-nuru-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lumi Nuru static site — therapist lineup generated from img/therapists/",
+  "scripts": {
+    "build": "node scripts/build-therapists.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
