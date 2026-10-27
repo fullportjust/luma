@@ -379,8 +379,8 @@ section[id]{scroll-margin-top:76px}
 /* .wrap has overflow:hidden; let the first child card keep its full 1px top border
    and rounded corners (and its hover lift) so they are never clipped */
 .ladies-home .wrap{max-width:1180px;overflow:visible}
-.ladies-home .lineup-slideshow{max-width:900px}
-.ladies-home .ls-track{height:clamp(360px,62vw,660px)}
+.ladies-home .lineup-slideshow{max-width:480px;margin-left:auto;margin-right:auto}
+.ladies-home .ls-track{height:auto;aspect-ratio:2 / 3}
 .ladies-home .ls-empty{border-style:dashed;background:rgba(255,255,255,.03);box-shadow:none}
 .ladies-home .ls-empty:hover{transform:none;border-color:var(--line)}
 .ladies-home .lead{max-width:56ch}

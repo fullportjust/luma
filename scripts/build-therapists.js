@@ -22,6 +22,27 @@ const outFile = path.join(root, 'data', 'therapists.json');
 
 const PHOTO_EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif']);
 
+// Photos listed here appear first, in this order (basename, no extension).
+const PRIORITY = ['IMG_6682', 'IMG_4978'];
+
+// Sort key: [tier, priorityIndex, name]. Priority photos first, then the rest
+// in natural order, and any "copy_*" file last.
+function sortKey(name) {
+  const base = name.replace(/\.[^.]+$/, '');
+  const p = PRIORITY.indexOf(base);
+  if (p !== -1) return [0, p, base];
+  if (base.toLowerCase().startsWith('copy_')) return [2, 0, base];
+  return [1, 0, base];
+}
+
+function comparePhotos(a, b) {
+  const ka = sortKey(a);
+  const kb = sortKey(b);
+  if (ka[0] !== kb[0]) return ka[0] - kb[0];
+  if (ka[1] !== kb[1]) return ka[1] - kb[1];
+  return ka[2].localeCompare(kb[2], undefined, { numeric: true, sensitivity: 'base' });
+}
+
 function listPhotos() {
   if (!fs.existsSync(photoDir)) return [];
   return fs.readdirSync(photoDir, { withFileTypes: true })
@@ -29,7 +50,7 @@ function listPhotos() {
     .map(entry => entry.name)
     .filter(name => !name.startsWith('.'))
     .filter(name => PHOTO_EXT.has(path.extname(name).toLowerCase()))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+    .sort(comparePhotos);
 }
 
 const photos = listPhotos().map(file => `/img/therapists/${file}`);
