@@ -15,10 +15,7 @@ const I18N = {
   "nav.language": { en:"Language", th:"ภาษา", zh:"语言", ja:"言語", ko:"언어" },
 
   // ---- shared / footer ----
-  "foot.tag":   { en:"Private KTV & massage lounge — karaoke rooms, drink buffets and a full spa menu.",
-                  th:"คาราโอเกะส่วนตัว & เลานจ์นวด — ห้องคาราโอเกะและเมนูสปาครบครัน",
-                  zh:"私人KTV与按摩会所 — 卡拉OK包间和全套水疗菜单。",
-                  ja:"プライベートKTV＆マッサージラウンジ — カラオケルーム、ドリンクビュッフェ、フルスパメニュー。", ko:"프라이빗 KTV & 마사지 라운지 — 노래방, 음료 뷔페, 풀 스파 메뉴." },
+  "foot.tag": { en:"Private KTV & massage lounge on Sukhumvit 39, Bangkok — karaoke rooms and a full spa menu.", th:"คาราโอเกะส่วนตัว & เลานจ์นวด สุขุมวิท 39 กรุงเทพฯ — ห้องคาราโอเกะและเมนูสปาครบครัน", zh:"曼谷素坤逸39巷私人KTV与按摩会所 — 卡拉OK包间和全套水疗菜单。", ja:"バンコク・スクンビット39のプライベートKTV＆マッサージラウンジ — カラオケルームとフルスパメニュー。", ko:"방콕 수쿰윗 39 프라이빗 KTV & 마사지 라운지 — 노래방과 풀 스파 메뉴." },
   "foot.open":  { en:"Open daily · 11am – 3am", th:"เปิดทุกวัน · 11:00 – 03:00", zh:"每日营业 · 上午11点至凌晨3点", ja:"年中無休 · 11時〜翌3時", ko:"매일 영업 · 오전 11시 ~ 새벽 3시" },
   "foot.visit": { en:"Visit", th:"ที่ตั้ง", zh:"地址", ja:"アクセス", ko:"오시는 길" },
   "foot.pages": { en:"Pages", th:"หน้าเพจ", zh:"页面", ja:"ページ", ko:"페이지" },
@@ -28,30 +25,22 @@ const I18N = {
                   ja:"20歳以上限定。飲酒は適量を。価格はタイバーツ(฿)、変更の場合あり。", ko:"만 20세 이상만 이용 가능. 책임 있는 음주를 부탁드립니다. 가격은 태국 바트(฿) 기준이며 변경될 수 있습니다." },
 
   // ---- home ----
-  "home.eyebrow": { en:"Karaoke · Massage · Nightlife", th:"คาราโอเกะ · นวด · ไนต์ไลฟ์", zh:"卡拉OK · 按摩 · 夜生活", ja:"カラオケ · マッサージ · ナイトライフ", ko:"노래방 · 마사지 · 나이트라이프" },
-  "home.hero":    { en:"Private KTV rooms, free-flow drinks, and a full spa menu.",
-                    th:"ห้องคาราโอเกะส่วนตัว เครื่องดื่มไม่อั้น และเมนูสปาครบครัน",
-                    zh:"私人KTV包间、无限畅饮和全套水疗菜单。",
-                    ja:"プライベートKTVルーム、フリードリンク、フルスパメニュー。", ko:"프라이빗 KTV 룸, 무제한 음료, 풀 스파 메뉴." },
+  "home.eyebrow": { en:"Private KTV & Massage · Sukhumvit 39, Bangkok", th:"คาราโอเกะส่วนตัว & นวด · สุขุมวิท 39 กรุงเทพฯ", zh:"私人KTV与按摩 · 曼谷素坤逸39巷", ja:"プライベートKTV＆マッサージ · バンコク スクンビット39", ko:"프라이빗 KTV & 마사지 · 방콕 수쿰윗 39" },
+  "home.hero": { en:"Private karaoke rooms and massage suites on Sukhumvit 39 — 5 min from BTS Phrom Phong, near Thong Lo.", th:"ห้องคาราโอเกะส่วนตัวและห้องนวดที่สุขุมวิท 39 — เดิน 5 นาทีจาก BTS พร้อมพงษ์ ใกล้ทองหล่อ", zh:"素坤逸39巷的私人卡拉OK包间与按摩套房 — 距BTS Phrom Phong站步行5分钟，靠近通罗。", ja:"スクンビット39のプライベートカラオケルームとマッサージスイート — BTSプロンポン駅から徒歩5分、トンローすぐ。", ko:"수쿰윗 39의 프라이빗 노래방과 마사지 스위트 — BTS 프롬퐁역 도보 5분, 통로 인근." },
   "home.book":    { en:"Book a Room", th:"จองห้อง", zh:"预订包间", ja:"予約する", ko:"룸 예약" },
   "home.viewmenu":{ en:"View Menu", th:"ดูเมนู", zh:"查看菜单", ja:"メニューを見る", ko:"메뉴 보기" },
   "home.offer":   { en:"What we offer", th:"บริการของเรา", zh:"我们提供", ja:"サービス", ko:"서비스 안내" },
   "home.worlds":  { en:"Two worlds, one address", th:"สองโลก ในที่เดียว", zh:"两个世界，一个地址", ja:"二つの世界が一つに", ko:"두 개의 세계, 하나의 공간" },
   "home.ktv":     { en:"Private KTV", th:"คาราโอเกะส่วนตัว", zh:"私人KTV", ja:"プライベートKTV", ko:"프라이빗 KTV" },
   "home.ktv.d":   { en:"Soundproof karaoke suites for 4–12 guests.", th:"ห้องคาราโอเกะเก็บเสียง สำหรับ 4–12 ท่าน", zh:"隔音卡拉OK套房，可容纳4–12人。", ja:"4〜12名様用の防音カラオケスイート。", ko:"4~12인용 방음 노래방 룸." },
-  "home.drinks":  { en:"Drink Buffet", th:"บุฟเฟ่ต์เครื่องดื่ม", zh:"酒水自助", ja:"ドリンクビュッフェ", ko:"음료 뷔페" },
-  "home.drinks.d":{ en:"Free-flow drinks, mixers included — plus beer & soju sets.", th:"เครื่องดื่มไม่อั้น รวมมิกเซอร์ — พร้อมเซ็ตเบียร์และโซจู", zh:"无限畅饮，含调酒 — 另有啤酒和烧酒套餐。", ja:"ミキサー付き飲み放題 — ビール・ソジュセットも。", ko:"믹서 포함 무제한 음료 — 맥주 & 소주 세트도 준비." },
   "home.spa":     { en:"Massage & Spa", th:"นวด & สปา", zh:"按摩与水疗", ja:"マッサージ＆スパ", ko:"마사지 & 스파" },
   "home.spa.d":   { en:"Thai & Nuru massage in private rooms.", th:"นวดไทย & นูรุ ในห้องส่วนตัว", zh:"私人房间内的泰式与Nuru按摩。", ja:"個室でのタイ式・ヌルマッサージ。", ko:"프라이빗 룸에서 즐기는 타이 & 누루 마사지." },
   "home.from":    { en:"from", th:"เริ่มต้น", zh:"起", ja:"〜", ko:"부터" },
   "home.combo":   { en:"KTV + Massage Combo", th:"เซ็ตคาราโอเกะ + นวด", zh:"KTV + 按摩套餐", ja:"KTV + マッサージ セット", ko:"KTV + 마사지 세트" },
-  "home.combo.d": { en:"1 hr KTV + 1 hr massage", th:"คาราโอเกะ 1 ชม. + นวด 1 ชม.", zh:"1小时KTV + 1小时按摩", ja:"KTV1時間 + マッサージ1時間", ko:"KTV 1시간 + 마사지 1시간" },
+  "home.combo.d": { en:"1 hr KTV + 1 hr Nuru", th:"คาราโอเกะ 1 ชม. + นูรุ 1 ชม.", zh:"1小时KTV + 1小时Nuru", ja:"KTV1時間 + ヌル1時間", ko:"KTV 1시간 + 누루 1시간" },
   "home.offers.eyebrow": { en:"Promotions", th:"โปรโมชั่น", zh:"优惠活动", ja:"プロモーション", ko:"프로모션" },
   "home.offers.title": { en:"Offers", th:"ข้อเสนอ", zh:"优惠", ja:"お得なプラン", ko:"특가" },
-  "home.drinkoffer.d": { en:"1 hr — free refill, mixer included", th:"1 ชม. — เติมฟรี รวมมิกเซอร์", zh:"1小时 — 免费续杯，含调酒", ja:"1時間 — おかわり自由、ミキサー込み", ko:"1시간 — 무료 리필, 믹서 포함" },
   "home.perperson": { en:"/ person", th:"/ ท่าน", zh:"/ 人", ja:"/ 人", ko:"/ 인" },
-  "home.ktvlady": { en:"1 hr KTV + lady", th:"คาราโอเกะ 1 ชม. + สาว", zh:"1小时KTV + 美女", ja:"KTV1時間 + レディ", ko:"KTV 1시간 + 레이디" },
-  "home.ktvlady.d": { en:"incl. drink buffet", th:"รวมบุฟเฟ่ต์เครื่องดื่ม", zh:"含酒水自助", ja:"ドリンクビュッフェ込み", ko:"음료 뷔페 포함" },
   "home.seemenu": { en:"See the menu", th:"ดูเมนู", zh:"查看菜单", ja:"メニューを見る", ko:"메뉴 보기" },
   "home.bestvalue":{ en:"Best Value", th:"คุ้มที่สุด", zh:"超值", ja:"お得", ko:"최고의 가치" },
   "home.reservecombo":{ en:"Reserve the combo", th:"จองเซ็ตนี้", zh:"预订套餐", ja:"セットを予約", ko:"세트 예약" },
@@ -66,14 +55,27 @@ const I18N = {
                         ja:"🎉 初回のお客様は KTV ルーム 1 時間無料！",
                         ko:"🎉 첫 방문 고객님, KTV 룸 1시간 무료!" },
 
+  "foot.bts": { en:"🚇 BTS Phrom Phong · 5 min walk · Thong Lo 1 stop", th:"🚇 BTS พร้อมพงษ์ · เดิน 5 นาที · ทองหล่อ 1 สถานี", zh:"🚇 BTS Phrom Phong站 · 步行5分钟 · 距通罗站1站", ja:"🚇 BTSプロンポン駅 徒歩5分 · トンロー駅から1駅", ko:"🚇 BTS 프롬퐁역 도보 5분 · 통로역 1정거장" },
+  "home.happy": { en:"Happy Hour", th:"แฮปปี้อาวร์", zh:"欢乐时光", ja:"ハッピーアワー", ko:"해피 아워" },
+  "home.happy.tag": { en:"11am – 4pm", th:"11:00 – 16:00", zh:"11:00 – 16:00", ja:"11時〜16時", ko:"오전 11시 ~ 오후 4시" },
+  "home.happy.d": { en:"Daily 11:00 AM – 4:00 PM · walk-ins welcome", th:"ทุกวัน 11:00 – 16:00 · วอล์กอินได้", zh:"每日上午11点至下午4点 · 欢迎直接到店", ja:"毎日11:00〜16:00 · 予約なしOK", ko:"매일 오전 11시 ~ 오후 4시 · 워크인 환영" },
+  "home.happy.p": { en:"฿300 off any service", th:"ลด ฿300 ทุกบริการ", zh:"任意服务立减฿300", ja:"全サービス ฿300 OFF", ko:"모든 서비스 ฿300 할인" },
+  "home.firstvisit": { en:"First Visit", th:"มาครั้งแรก", zh:"首次到店", ja:"初回来店", ko:"첫 방문" },
+  "home.firstvisit.d": { en:"Private KTV room for 1 hour on us", th:"ห้องคาราโอเกะส่วนตัวฟรี 1 ชั่วโมง", zh:"免费私人KTV包间1小时", ja:"プライベートKTVルーム1時間無料", ko:"프라이빗 KTV 룸 1시간 무료" },
+  "home.firstvisit.p": { en:"Free", th:"ฟรี", zh:"免费", ja:"無料", ko:"무료" },
+  "home.seektv": { en:"See KTV rooms", th:"ดูห้องคาราโอเกะ", zh:"查看KTV包间", ja:"KTVルームを見る", ko:"KTV 룸 보기" },
+  "home.findus.bts.val": { en:"Phrom Phong · 5 min walk · Thong Lo 1 stop", th:"พร้อมพงษ์ · เดิน 5 นาที · ทองหล่อ 1 สถานี", zh:"Phrom Phong站 · 步行5分钟 · 距通罗站1站", ja:"プロンポン駅 徒歩5分 · トンロー駅から1駅", ko:"프롬퐁역 도보 5분 · 통로역 1정거장" },
+  "home.findus.area": { en:"Area", th:"ย่าน", zh:"区域", ja:"エリア", ko:"지역" },
+  "home.findus.area.val": { en:"Sukhumvit 39 · between Phrom Phong & Thong Lo", th:"สุขุมวิท 39 · ระหว่างพร้อมพงษ์และทองหล่อ", zh:"素坤逸39巷 · 位于Phrom Phong与通罗之间", ja:"スクンビット39 · プロンポンとトンローの間", ko:"수쿰윗 39 · 프롬퐁과 통로 사이" },
+  "nav.ktv": { en:"Karaoke", th:"คาราโอเกะ", zh:"卡拉OK", ja:"カラオケ", ko:"노래방" },
+  "nav.massage": { en:"Massage", th:"นวด", zh:"按摩", ja:"マッサージ", ko:"마사지" },
+  "menu.lead": { en:"Private KTV rooms and massage on Sukhumvit 39, Bangkok — near Phrom Phong & Thong Lo.", th:"ห้องคาราโอเกะส่วนตัวและนวด สุขุมวิท 39 กรุงเทพฯ — ใกล้พร้อมพงษ์และทองหล่อ", zh:"曼谷素坤逸39巷私人KTV包间与按摩 — 靠近Phrom Phong与通罗。", ja:"バンコク・スクンビット39のプライベートKTVとマッサージ — プロンポン・トンロー近く。", ko:"방콕 수쿰윗 39 프라이빗 KTV와 마사지 — 프롬퐁·통로 인근." },
   // ---- menu ----
   "menu.eyebrow": { en:"All prices in ฿ · service charge & VAT included", th:"ราคาทั้งหมดเป็นบาท · รวมเซอร์วิสชาร์จและภาษีแล้ว", zh:"所有价格以฿计 · 已含服务费和增值税", ja:"全価格฿表示 · サービス料・税込", ko:"모든 가격 ฿ 기준 · 봉사료 및 VAT 포함" },
   "menu.title":   { en:"Menu & Pricing", th:"เมนู & ราคา", zh:"菜单与价格", ja:"メニュー＆料金", ko:"메뉴 & 가격" },
   "menu.rooms":   { en:"Rooms", th:"ห้อง", zh:"包间", ja:"ルーム", ko:"룸" },
   "menu.shower":  { en:"Standard", th:"มาตรฐาน", zh:"标准", ja:"スタンダード", ko:"스탠다드" },
   "menu.vip":     { en:"VIP Room", th:"ห้อง VIP", zh:"VIP包间", ja:"VIPルーム", ko:"VIP 룸" },
-  "menu.drinkbuffet":{ en:"Drink Buffet", th:"บุฟเฟ่ต์เครื่องดื่ม", zh:"酒水自助", ja:"ドリンクビュッフェ", ko:"음료 뷔페" },
-  "menu.drinknote":{ en:"Free refill on all buffet drinks — mixers included.", th:"เติมเครื่องดื่มบุฟเฟ่ต์ได้ไม่อั้น — รวมมิกเซอร์", zh:"自助酒水免费续杯 — 含调酒。", ja:"ビュッフェドリンクおかわり自由 — ミキサー込み。", ko:"모든 뷔페 음료 무한 리필 — 믹서 포함." },
   "menu.beers":   { en:"Beers", th:"เบียร์", zh:"啤酒", ja:"ビール", ko:"맥주" },
   "menu.soju":    { en:"Soju", th:"โซจู", zh:"烧酒", ja:"ソジュ", ko:"소주" },
   "menu.drinks":  { en:"Drinks", th:"เครื่องดื่ม", zh:"酒水", ja:"ドリンク", ko:"음료" },
@@ -194,6 +196,7 @@ function detectBrowserLang(){
   return null;
 }
 function getLang(){
+  try{ const q=new URLSearchParams(location.search).get('lang'); if(q && LANGS[q]){ localStorage.setItem('ln_lang', q); return q; } }catch(e){}
   const saved = localStorage.getItem('ln_lang');
   if(saved){
     // one-time fix: if saved as 'en' but browser is non-English, update
