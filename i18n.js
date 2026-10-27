@@ -56,10 +56,6 @@ const I18N = {
                         ko:"🎉 첫 방문 고객님, KTV 룸 1시간 무료!" },
 
   "foot.bts": { en:"🚇 BTS Phrom Phong · 5 min walk · Thong Lo 1 stop", th:"🚇 BTS พร้อมพงษ์ · เดิน 5 นาที · ทองหล่อ 1 สถานี", zh:"🚇 BTS Phrom Phong站 · 步行5分钟 · 距通罗站1站", ja:"🚇 BTSプロンポン駅 徒歩5分 · トンロー駅から1駅", ko:"🚇 BTS 프롬퐁역 도보 5분 · 통로역 1정거장" },
-  "home.happy": { en:"Happy Hour", th:"แฮปปี้อาวร์", zh:"欢乐时光", ja:"ハッピーアワー", ko:"해피 아워" },
-  "home.happy.tag": { en:"11am – 4pm", th:"11:00 – 16:00", zh:"11:00 – 16:00", ja:"11時〜16時", ko:"오전 11시 ~ 오후 4시" },
-  "home.happy.d": { en:"Daily 11:00 AM – 4:00 PM · walk-ins welcome", th:"ทุกวัน 11:00 – 16:00 · วอล์กอินได้", zh:"每日上午11点至下午4点 · 欢迎直接到店", ja:"毎日11:00〜16:00 · 予約なしOK", ko:"매일 오전 11시 ~ 오후 4시 · 워크인 환영" },
-  "home.happy.p": { en:"฿300 off any service", th:"ลด ฿300 ทุกบริการ", zh:"任意服务立减฿300", ja:"全サービス ฿300 OFF", ko:"모든 서비스 ฿300 할인" },
   "home.firstvisit": { en:"First Visit", th:"มาครั้งแรก", zh:"首次到店", ja:"初回来店", ko:"첫 방문" },
   "home.firstvisit.d": { en:"Private KTV room for 1 hour on us", th:"ห้องคาราโอเกะส่วนตัวฟรี 1 ชั่วโมง", zh:"免费私人KTV包间1小时", ja:"プライベートKTVルーム1時間無料", ko:"프라이빗 KTV 룸 1시간 무료" },
   "home.firstvisit.p": { en:"Free", th:"ฟรี", zh:"免费", ja:"無料", ko:"무료" },
